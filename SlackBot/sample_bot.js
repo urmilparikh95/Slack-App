@@ -21,11 +21,12 @@ controller.spawn({
 controller.hears('configure GIT',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	// sample call to service
-	droid_database.save('test_user','test_repo.git').then(function (result) 
+	droid_database.save('test_user','fail_test_repo.git').then(function (result) 
 	{
 		bot.reply(message,"Stored successfully");
 	}).catch(function(error){
-		bot.reply(message,"Error in storing the data");
+		bot.reply(message, "Data could not be saved!");
+		console.log("Error: "+error);
 	});
 
 });
@@ -35,7 +36,7 @@ function loadMockData(){
 	//Mock Data
 	var callback = sinon.stub(droid_database, "save");
 	callback.withArgs("test_user", "test_repo.git").resolves(true);
-	callback.withArgs("test_user", "fail_test_repo.git").rejects("Repository could not be saved found!");
+	callback.withArgs("test_user", "fail_test_repo.git").rejects("Repository could not be saved in the database!");
 
 }
 
