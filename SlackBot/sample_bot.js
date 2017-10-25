@@ -22,7 +22,8 @@ controller.hears('configure GIT',['ambient','mention', 'direct_mention','direct_
 {
 	// sample call to service
 	droid_database.save('test_user','test_repo.git').then(function (result) 
-	{		
+	{
+				
 		bot.reply(message,"Stored successfully");
 
 	}).catch(function(error){
