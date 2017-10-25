@@ -23,7 +23,7 @@ controller.spawn({
 controller.hears('save',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	// sample call to service
-	database.save('test_user','fail_test_repo.git').then(function (result) 
+	database.save('test_user2','fail_test_repo.git').then(function (result) 
 	{
 		bot.reply(message,"Stored successfully");
 	}).catch(function(error){
@@ -36,7 +36,7 @@ controller.hears('save',['ambient','mention', 'direct_mention','direct_message']
 controller.hears('get',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	// sample call to service
-	database.get("b").then(function (user) 
+	database.get("bqwf").then(function (user) 
 	{
 		console.log("User: "+JSON.stringify(user));
 			// sample call to service
