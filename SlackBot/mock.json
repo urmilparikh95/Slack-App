@@ -1,11 +1,11 @@
 { 
 	"user_repos" :
 	[
-	  {"user": "a", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
-	  {"user": "b","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
-	  {"user": "c", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
-	  {"user": "d","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
-	  {"user": "e", "credential": { "email": "dummy_email2@github.com", "password": "encrypted_password2" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
+	  {"user": "dummy_user_a", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
+	  {"user": "dummy_user_b","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
+	  {"user": "dummy_user_c", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
+	  {"user": "dummy_user_d","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
+	  {"user": "dummy_user_e", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
 	],
 	"repos" :
 	[

@@ -5,19 +5,19 @@ function loadMockData(database, github, droid){
     
     //Mock Data
     var save = sinon.stub(database, "save");
-    save.withArgs({"name": "Test User", "email": "dummy@email.com"},
-        {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo2", "git_username": "dummy_email", "git_password": "dummy_password"})
+    save.withArgs({"name": "Test User1", "email": "dummy_email@bot.com"},
+        {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo1", "git_username": "dummy_email", "git_password": "dummy_password"})
         .resolves(true);
-    save.withArgs({"name": "Test User", "email": "dummy@email.com"},
-        {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo1"})
-        .resolves(true);
+    save.withArgs({"name": "Test User2", "email": "dummy_email@bot.com"},
+        {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo2"})
+        .rejects("Unable to store data in the database!");
     
     var get = sinon.stub(database, "get");
-    get.withArgs("a").resolves(data.user_repos[0]);
-    get.withArgs("b").resolves(data.user_repos[1]);
-    get.withArgs("c").resolves(data.user_repos[2]);
-    get.withArgs("d").resolves(data.user_repos[3]);
-    get.withArgs("e").resolves(data.user_repos[4]);
+    get.withArgs("dummy_user_a").resolves(data.user_repos[0]);
+    get.withArgs("dummy_user_b").resolves(data.user_repos[1]);
+    get.withArgs("dummy_user_c").resolves(data.user_repos[2]);
+    get.withArgs("dummy_user_d").resolves(data.user_repos[3]);
+    get.withArgs("dummy_user_e").resolves(data.user_repos[4]);
 
     var github_mock = sinon.stub(github, "getFilesFromRepo");
     github_mock.withArgs(data.user_repos[0].repo_link, data.user_repos[0].credential).resolves(data.repos[0]);
