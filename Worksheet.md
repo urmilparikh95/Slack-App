@@ -6,10 +6,10 @@
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
 | Design Fix | Completed | Updated Architecture Description | @all
-| Use Cases | In progress | Replacing push commits with pull requests | @scyadav, @onjoshi
+| Use Cases | In progress | Replacing push commits with pull requests | @scyadav, @onjoshi, @uparikh
 | Bot Design | In progress | How to deal with pull requests? | @all
-| Mocking | &nbsp; | &nbsp; | @onjoshi, @uparikh
-| Testing | &nbsp; | Selenium | @gmkhande, @skkulkar
+| Mocking | - | How to perform mocking? | @onjoshi
+| Testing | - | Selenium | @gmkhande, @skkulkar
 
 
 Other sub tasks:  
