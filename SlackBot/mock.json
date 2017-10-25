@@ -1,0 +1,91 @@
+{ 
+	"user_repos" :
+	[
+	  {"user": "a", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
+	  {"user": "b","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
+	  {"user": "c", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
+	  {"user": "d","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
+	  {"user": "e", "credential": { "email": "dummy_email2@github.com", "password": "encrypted_password2" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
+	],
+	"repos" :
+	[
+	  {
+		"repo_id": 1,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo1",
+		"files": ["MainActivity.java", "layout_main.xml", "CalendarEventActivity.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 2,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo2",
+		"files": ["MainActivity.java", "layout_main.xml", "CalendarActivity.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 3,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo3",
+		"files": ["FancyListview.java", "DummyActivity.java", "CalendarActivity.java", "ViewPager.java"]
+	  },
+	  {
+		"repo_id": 4,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo4",
+		"files": ["MainActivity.java", "layout_main.xml", "ViewPageIndicator.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 5,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo5",
+		"files": ["EventAddActivity.java", "layout_activity.xml", "CalendarActivity.java", "BaseActivity.java", "ViewPageIndicator.java"]
+	  }
+	],
+	"recommendations":[
+	  {
+		"recommendation_id": 1,
+		"code_libraries": [
+			"Picasso",
+			"Butter Knife",
+			"Gson",
+			"ActiveAndroid",
+			"EventBus",
+			"EasyCamera",
+			"RetroFit"
+		]
+	  },
+	  {
+		"recommendation_id": 2,
+		"ui_libraries": [
+			"ParallaxPagerTransformer",
+			"Caldroid",
+			"DiscreteSeekBar",
+			"SmoothProgressBar",
+			"MovingButton",
+			"Sweet Alert",
+			"GifImageView",
+			"Shimmer for Android"
+		]
+	  },
+	  {
+		"recommendation_id": 3,
+		"code_refactoring_suggestions": [
+			"Use dp instead of pixel values in layout.xml",
+			"Strings should be defined in strings.xml rather than in the layout.xml",
+			"Use build.gradle for building the project",
+			"Use styles to avoid duplication of UI code",
+			"Use proguard for code obfuscation",
+			"Put password and sensitive data in gradle.properties",
+			"Place launcher icons in mipmap-folders"
+		]
+	  },
+	  {
+		"recommendation_id": 4,
+		"code_refactoring_suggestions": [
+			"Include resources for xxxhdpi screens",
+			"Put password and sensitive data in gradle.properties"
+		],
+		"ui_libraries": [
+			"FadingActionBar"
+		],
+		"code_libraries": [
+			"MrVector",
+			"Butter Knife"
+		]
+	  }
+	]
+  }

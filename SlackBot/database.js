@@ -1,4 +1,5 @@
 var Promise = require("bluebird");
+var sinon = require('sinon');
 
 function sleep (time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
@@ -7,11 +8,7 @@ function sleep (time) {
 function save(user, git_data ){
 	return new Promise(function (resolve, reject) 
 	{
-		sleep(2000).then(() => {
-			//Save user and git_data
-			var result = true;
-			reject(result);
-		})
+		
 	});
 }
 
