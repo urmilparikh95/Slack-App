@@ -26,9 +26,12 @@
 
 
 ## 4. Selenium Testing:  
-
+   To support testing of your bot, we will use Selenium to verify that the bot is returning the correct response based on a input message.
 
 ## 5. Task Tracking:  
    
    
    The progress of each week (iteration), describing the tasks completed for the slack bot, can be found at [Worksheet.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md)
+
+
+## 6. Screencast:  
