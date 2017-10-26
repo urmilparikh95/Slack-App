@@ -33,6 +33,153 @@ controller.hears('save',['ambient','mention', 'direct_mention','direct_message']
 
 });
 
+controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
+{
+	bot.startConversation(message, function(err, convo) {
+		convo.say('Give me a moment!');
+		convo.say('Let me check if you have configured a git repository!');
+		// sample call to service
+		database.get('dummy_user_a').then(function (result) 
+		{
+			convo.say('You have configured repository: '+result.repo_link);
+			convo.say('Scanning repository to suggest UI libraries...');
+			github.getFilesFromRepo(result.repo_link, result.credential).then(function (repo) 
+			{
+				console.log("Repo: "+JSON.stringify(repo));
+					droid.getUiLibraries(repo.files).then(function (recommendations) 
+					{
+						console.log("Recommendations: "+JSON.stringify(recommendations));
+						convo.say("Recommendations: "+JSON.stringify(recommendations));
+					}).catch(function(error){
+						convo.say("Recommendations could not be fetched!");
+						console.log("Error: "+error);
+					});
+
+			}).catch(function(error){
+				convo.say("Files could not be fetched!");
+				console.log("Error: "+error);
+			});
+		}).catch(function(error){
+			convo.say('You have not configured a git repository. Please configure a git repository first using the /start command.');
+			console.log("Error: "+error);
+		});
+	  });
+});
+
+controller.hears('libraries',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
+{
+	bot.startConversation(message, function(err, convo) {
+		convo.say('Give me a moment!');
+		convo.say('Let me check if you have configured a git repository!');
+		// sample call to service
+		database.get('dummy_user_a').then(function (result) 
+		{
+			convo.say('You have configured repository: '+result.repo_link);
+			convo.ask('Which type of recommendations do you want? Options are 1. UI 2. Code 3. General 4. All (Default)', function(answer, convo) {
+				var recommendation_type = answer.text;
+				if (recommendation_type === "UI"){
+					suggesUiLibraries(result.repo_link, result.credential, convo);
+				}else if(recommendation_type === "Code"){
+					suggesCodeLibraries(result.repo_link, result.credential, convo);
+				}else if(recommendation_type === "General"){
+					suggesCodeRefactorings(result.repo_link, result.credential, convo);
+				}else{
+					suggestAllImprovements(result.repo_link, result.credential, convo);
+				}
+				convo.next();
+			  });
+		}).catch(function(error){
+			convo.say('You have not configured a git repository. Please configure a git repository first using the /start command.');
+			console.log("Error: "+error);
+		});
+	  });
+});
+
+function suggesUiLibraries(repo_link, credential, convo){
+	convo.say('Scanning repository to suggest UI libraries...');
+	github.getFilesFromRepo(repo_link, credential).then(function (repo) 
+	{
+		console.log("Repo: "+JSON.stringify(repo));
+			droid.getUiLibraries(repo.files).then(function (recommendations) 
+			{
+				convo.say("We suggest you these following UI libraries improve the quality of your code ..")
+				console.log("Recommendations: "+JSON.stringify(recommendations));
+				convo.say("Recommendations: "+JSON.stringify(recommendations));
+			}).catch(function(error){
+				convo.say("Recommendations could not be fetched!");
+				console.log("Error: "+error);
+			});
+
+	}).catch(function(error){
+		convo.say("Files could not be fetched!");
+		console.log("Error: "+error);
+	});
+}
+
+function suggesCodeLibraries(repo_link, credential, convo){
+	convo.say('Scanning repository to suggest Core Code libraries...');
+	github.getFilesFromRepo(repo_link, credential).then(function (repo) 
+	{
+		console.log("Repo: "+JSON.stringify(repo));
+			droid.getCodeLibraries(repo.files).then(function (recommendations) 
+			{
+				console.log("Recommendations: "+JSON.stringify(recommendations));
+				convo.say("We suggest you these following core code libraries improve the quality of your code ..")
+				convo.say("Recommendations: "+JSON.stringify(recommendations));
+			}).catch(function(error){
+				convo.say("Recommendations could not be fetched!");
+				console.log("Error: "+error);
+			});
+
+	}).catch(function(error){
+		convo.say("Files could not be fetched!");
+		console.log("Error: "+error);
+	});
+}
+
+function suggesCodeRefactorings(repo_link, credential, convo){
+	convo.say('Scanning repository to suggest general code refactorings...');
+	github.getFilesFromRepo(repo_link, credential).then(function (repo) 
+	{
+		console.log("Repo: "+JSON.stringify(repo));
+			droid.getCodeRefactoringSuggestions(repo.files).then(function (recommendations) 
+			{
+				console.log("Recommendations: "+JSON.stringify(recommendations));
+				convo.say("We suggest you these following things to improve the quality of your code ..")
+				convo.say("Suggestions: "+JSON.stringify(recommendations));
+			}).catch(function(error){
+				convo.say("Recommendations could not be fetched!");
+				console.log("Error: "+error);
+			});
+
+	}).catch(function(error){
+		convo.say("Files could not be fetched!");
+		console.log("Error: "+error);
+	});
+}
+
+function suggestAllImprovements(repo_link, credential, convo){
+	convo.say('Scanning repository to suggest all possible improvements...');
+	github.getFilesFromRepo(repo_link, credential).then(function (repo) 
+	{
+		console.log("Repo: "+JSON.stringify(repo));
+			droid.getAllSuggestions(repo.files).then(function (recommendations) 
+			{
+				console.log("Recommendations: "+JSON.stringify(recommendations));
+				convo.say("We suggest you these following things to improve the quality of your code ..")
+				convo.say("Recommendations: "+JSON.stringify(recommendations));
+			}).catch(function(error){
+				convo.say("Recommendations could not be fetched!");
+				console.log("Error: "+error);
+			});
+
+	}).catch(function(error){
+		convo.say("Files could not be fetched!");
+		console.log("Error: "+error);
+	});
+}
+
+
 controller.hears('get',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	// sample call to service
