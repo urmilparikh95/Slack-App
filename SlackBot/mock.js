@@ -38,7 +38,7 @@ function loadMockData(database, github, droid){
     droid_ui_lib.withArgs(data.repos[1].files).resolves(data.recommendations[1]);
     droid_ui_lib.withArgs(data.repos[2].files).resolves(data.recommendations[1]);
     droid_ui_lib.withArgs(data.repos[3].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
+    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[6]);
 
     var droid_refactorings = sinon.stub(droid, "getCodeRefactoringSuggestions");
     droid_refactorings.withArgs(data.repos[0].files).resolves(data.recommendations[2]);
@@ -52,7 +52,7 @@ function loadMockData(database, github, droid){
     droid_all.withArgs(data.repos[1].files).resolves(data.recommendations[3]);
     droid_all.withArgs(data.repos[2].files).resolves(data.recommendations[3]);
     droid_all.withArgs(data.repos[3].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[6]);
+    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
 
 }
 

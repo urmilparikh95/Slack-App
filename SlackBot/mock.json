@@ -93,15 +93,15 @@
 	  },
 	  {
 		"status": "error",
-		"message": "Please check if the repository exists!"
+		"message": "ERROR: Please check if the repository exists!"
 	  },
 	  {
 		"status": "error",
-		"message": "No recommendations found! Please verify if the repository contains Android code"
+		"message": "ERROR: No recommendations found! Please verify if the repository contains Android code"
 	  },
 	  {
 		"status": "error",
-		"message": "Please check if the repository exists!"
+		"message": "ERROR: Not enough privileges to access the repository!"
 	  }
 
 	]

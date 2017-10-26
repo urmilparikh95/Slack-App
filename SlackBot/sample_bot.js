@@ -40,7 +40,7 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 		convo.say('Give me a moment!');
 		convo.say('Let me check if you have configured a git repository!');
 		// sample call to service
-		database.get('FAIL_USER_ID').then(function (result) 
+		database.get(message.user).then(function (result) 
 		{
 			convo.say('You have configured repository: '+result.repo_link);
 			convo.say('Scanning repository to suggest UI libraries...');
@@ -77,7 +77,7 @@ controller.hears('libraries',['ambient','mention', 'direct_mention','direct_mess
 		convo.say('Give me a moment!');
 		convo.say('Let me check if you have configured a git repository!');
 		// sample call to service
-		database.get('dummy_user_a').then(function (result) 
+		database.get(message.user).then(function (result) 
 		{
 			convo.say('You have configured repository: '+result.repo_link);
 			convo.ask('Which type of recommendations do you want? Options are 1. UI 2. Code 3. General 4. All (Default)', function(answer, convo) {
