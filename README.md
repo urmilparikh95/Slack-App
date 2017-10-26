@@ -16,4 +16,19 @@
 ## 1. Use Cases:  
 
 
-   The refined Use cases can be found at [Use Cases](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/usecases.md)  
+   The refined Use cases can be found at [Use Cases](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/usecases.md)   
+   
+   
+## 2. Mocking Service Component:    
+
+
+## 3. Bot Implementation:  
+
+
+## 4. Selenium Testing:  
+
+
+## 5. Task Tracking:  
+   
+   
+   The progress of each week (iteration), describing the tasks completed for the slack bot, can be found at [Worksheet.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md)
