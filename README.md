@@ -21,6 +21,8 @@
    
 ## 2. Mocking Service Component:    
 
+Pertaining to this milestone, for platform integration and bot interaction, although we do not yet have a working service implementation, we have implemented mock services and data to support service integration. 
+For example, we have mocked github user data for the bot to use, that helps us to mock git configuration with the bot. We have used 'sinon' for mocking.
 
 ## 3. Bot Implementation:  
 
