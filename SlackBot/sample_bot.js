@@ -33,6 +33,42 @@ controller.hears('save',['ambient','mention', 'direct_mention','direct_message']
 
 });
 
+var currentUser; 
+var repo_link;
+var credential;
+
+controller.hears('config',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
+{	
+	currentUser = message.user
+	bot.startConversation(message, register)
+
+});
+
+register = function(response, convo) {
+	convo.ask("Configure your Github Repository\n Enter your Repo Link", function(response, convo) {
+		repo_link = response.text;
+	  	convo.say("Great");
+	 	credentials(response, convo);
+	  	convo.next();
+	});
+}
+
+credentials = function(response, convo) { 
+		convo.ask("Provide your Github credentials ", function(response, convo) {
+		credential = response.text;
+		//call to function
+		database.save('test_user2','fail_test_repo.git').then(function (result) 
+		{
+			bot.reply(message,"Stored successfully");
+		}).catch(function(error){
+			bot.reply(message, "Data could not be saved!");
+			console.log("Error: "+error);
+		});
+	  convo.say("Github Configured!!");
+	  convo.next();
+	});
+}
+
 controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	bot.startConversation(message, function(err, convo) {

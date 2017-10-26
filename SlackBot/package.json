@@ -13,6 +13,7 @@
     "botkit": "^0.5.8",
     "forecast.io": "0.0.9",
     "sinon": "^4.0.2",
-    "slackbots": "^0.5.1"
+    "slackbots": "^0.5.1",
+    "morgan": ""
   }
 }
