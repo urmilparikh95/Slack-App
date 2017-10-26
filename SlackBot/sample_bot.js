@@ -71,7 +71,6 @@ credentials = function(response, convo) {
 
 controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
-	console.log(bot);
 	bot.startConversation(message, function(err, convo) {
 		convo.say('Give me a moment!');
 		convo.say('Let me check if you have configured a git repository!');
@@ -109,6 +108,7 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 
 controller.hears('libraries',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
+	console.log(message.user);
 	bot.startConversation(message, function(err, convo) {
 		convo.say('Give me a moment!');
 		convo.say('Let me check if you have configured a git repository!');
