@@ -35,11 +35,12 @@ controller.hears('save',['ambient','mention', 'direct_mention','direct_message']
 
 controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
+	console.log(bot);
 	bot.startConversation(message, function(err, convo) {
 		convo.say('Give me a moment!');
 		convo.say('Let me check if you have configured a git repository!');
 		// sample call to service
-		database.get('dummy_user_a').then(function (result) 
+		database.get('FAIL_USER_ID').then(function (result) 
 		{
 			convo.say('You have configured repository: '+result.repo_link);
 			convo.say('Scanning repository to suggest UI libraries...');
@@ -49,15 +50,19 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 					droid.getUiLibraries(repo.files).then(function (recommendations) 
 					{
 						console.log("Recommendations: "+JSON.stringify(recommendations));
-						convo.say("Recommendations: "+JSON.stringify(recommendations));
+						if (recommendations.status != undefined && recommendations.status === "error"){
+							convo.say(recommendations.message);
+						}else{
+							convo.say("Recommendations: "+JSON.stringify(recommendations));
+						}
 					}).catch(function(error){
 						convo.say("Recommendations could not be fetched!");
 						console.log("Error: "+error);
 					});
 
 			}).catch(function(error){
-				convo.say("Files could not be fetched!");
-				console.log("Error: "+error);
+				console.log("Get Files Error : "+error);
+				convo.say("Files could not be found!");
 			});
 		}).catch(function(error){
 			convo.say('You have not configured a git repository. Please configure a git repository first using the /start command.');
@@ -102,9 +107,13 @@ function suggesUiLibraries(repo_link, credential, convo){
 		console.log("Repo: "+JSON.stringify(repo));
 			droid.getUiLibraries(repo.files).then(function (recommendations) 
 			{
-				convo.say("We suggest you these following UI libraries improve the quality of your code ..")
-				console.log("Recommendations: "+JSON.stringify(recommendations));
-				convo.say("Recommendations: "+JSON.stringify(recommendations));
+				if (recommendations.status != undefined && recommendations.status === "error"){
+					convo.say(recommendations.message);
+				}else{
+					convo.say("We suggest you these following UI libraries improve the quality of your code ..")
+					console.log("Recommendations: "+JSON.stringify(recommendations));
+					convo.say("Recommendations: "+JSON.stringify(recommendations));
+				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
 				console.log("Error: "+error);
@@ -123,9 +132,13 @@ function suggesCodeLibraries(repo_link, credential, convo){
 		console.log("Repo: "+JSON.stringify(repo));
 			droid.getCodeLibraries(repo.files).then(function (recommendations) 
 			{
-				console.log("Recommendations: "+JSON.stringify(recommendations));
-				convo.say("We suggest you these following core code libraries improve the quality of your code ..")
-				convo.say("Recommendations: "+JSON.stringify(recommendations));
+				if (recommendations.status != undefined && recommendations.status === "error"){
+					convo.say(recommendations.message);
+				}else{
+					console.log("Recommendations: "+JSON.stringify(recommendations));
+					convo.say("We suggest you these following core code libraries improve the quality of your code ..")
+					convo.say("Recommendations: "+JSON.stringify(recommendations));
+				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
 				console.log("Error: "+error);
@@ -144,9 +157,13 @@ function suggesCodeRefactorings(repo_link, credential, convo){
 		console.log("Repo: "+JSON.stringify(repo));
 			droid.getCodeRefactoringSuggestions(repo.files).then(function (recommendations) 
 			{
-				console.log("Recommendations: "+JSON.stringify(recommendations));
-				convo.say("We suggest you these following things to improve the quality of your code ..")
-				convo.say("Suggestions: "+JSON.stringify(recommendations));
+				if (recommendations.status != undefined && recommendations.status === "error"){
+					convo.say(recommendations.message);
+				}else{
+					console.log("Recommendations: "+JSON.stringify(recommendations));
+					convo.say("We suggest you these following things to improve the quality of your code ..")
+					convo.say("Suggestions: "+JSON.stringify(recommendations));
+				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
 				console.log("Error: "+error);
@@ -165,9 +182,13 @@ function suggestAllImprovements(repo_link, credential, convo){
 		console.log("Repo: "+JSON.stringify(repo));
 			droid.getAllSuggestions(repo.files).then(function (recommendations) 
 			{
-				console.log("Recommendations: "+JSON.stringify(recommendations));
-				convo.say("We suggest you these following things to improve the quality of your code ..")
-				convo.say("Recommendations: "+JSON.stringify(recommendations));
+				if (recommendations.status != undefined && recommendations.status === "error"){
+					convo.say(recommendations.message);
+				}else{
+					console.log("Recommendations: "+JSON.stringify(recommendations));
+					convo.say("We suggest you these following things to improve the quality of your code ..")
+					convo.say("Recommendations: "+JSON.stringify(recommendations));
+				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
 				console.log("Error: "+error);
@@ -183,7 +204,7 @@ function suggestAllImprovements(repo_link, credential, convo){
 controller.hears('get',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	// sample call to service
-	database.get("bqwf").then(function (user) 
+	database.get(message.user).then(function (user) 
 	{
 		console.log("User: "+JSON.stringify(user));
 			// sample call to service

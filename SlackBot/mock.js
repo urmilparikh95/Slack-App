@@ -13,11 +13,11 @@ function loadMockData(database, github, droid){
         .rejects("Unable to store data in the database!");
     
     var get = sinon.stub(database, "get");
-    get.withArgs("dummy_user_a").resolves(data.user_repos[0]);
-    get.withArgs("dummy_user_b").resolves(data.user_repos[1]);
-    get.withArgs("dummy_user_c").resolves(data.user_repos[2]);
-    get.withArgs("dummy_user_d").resolves(data.user_repos[3]);
-    get.withArgs("dummy_user_e").resolves(data.user_repos[4]);
+    get.withArgs(data.user_repos[0].user).resolves(data.user_repos[0]);
+    get.withArgs(data.user_repos[1].user).resolves(data.user_repos[1]);
+    get.withArgs(data.user_repos[2].user).resolves(data.user_repos[2]);
+    get.withArgs(data.user_repos[3].user).resolves(data.user_repos[3]);
+    get.withArgs(data.user_repos[4].user).resolves(data.user_repos[4]);
 
     var github_mock = sinon.stub(github, "getFilesFromRepo");
     github_mock.withArgs(data.user_repos[0].repo_link, data.user_repos[0].credential).resolves(data.repos[0]);
@@ -31,28 +31,28 @@ function loadMockData(database, github, droid){
     droid_code_lib.withArgs(data.repos[1].files).resolves(data.recommendations[0]);
     droid_code_lib.withArgs(data.repos[2].files).resolves(data.recommendations[0]);
     droid_code_lib.withArgs(data.repos[3].files).resolves(data.recommendations[0]);
-    droid_code_lib.withArgs(data.repos[4].files).resolves(data.recommendations[0]);
+    droid_code_lib.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
 
     var droid_ui_lib = sinon.stub(droid, "getUiLibraries");
     droid_ui_lib.withArgs(data.repos[0].files).resolves(data.recommendations[1]);
     droid_ui_lib.withArgs(data.repos[1].files).resolves(data.recommendations[1]);
     droid_ui_lib.withArgs(data.repos[2].files).resolves(data.recommendations[1]);
     droid_ui_lib.withArgs(data.repos[3].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[1]);
+    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
 
     var droid_refactorings = sinon.stub(droid, "getCodeRefactoringSuggestions");
     droid_refactorings.withArgs(data.repos[0].files).resolves(data.recommendations[2]);
     droid_refactorings.withArgs(data.repos[1].files).resolves(data.recommendations[2]);
     droid_refactorings.withArgs(data.repos[2].files).resolves(data.recommendations[2]);
     droid_refactorings.withArgs(data.repos[3].files).resolves(data.recommendations[2]);
-    droid_refactorings.withArgs(data.repos[4].files).resolves(data.recommendations[2]);
+    droid_refactorings.withArgs(data.repos[4].files).resolves(data.recommendations[4]);
 
     var droid_all = sinon.stub(droid, "getAllSuggestions");
     droid_all.withArgs(data.repos[0].files).resolves(data.recommendations[3]);
     droid_all.withArgs(data.repos[1].files).resolves(data.recommendations[3]);
     droid_all.withArgs(data.repos[2].files).resolves(data.recommendations[3]);
     droid_all.withArgs(data.repos[3].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[3]);   
+    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[6]);
 
 }
 
