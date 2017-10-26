@@ -55,3 +55,6 @@ Other sub-tasks:
 * How to make the bot interactive?
 * Debugging some breaking code.  
 
+
+[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for entire project
+

@@ -58,8 +58,8 @@ public class WebTest
 		WebElement signin = driver.findElement(By.id("signin_btn"));
 		signin.click();
 		
-		driver.get("https://se-bot-project.slack.com/messages/trial");
-		wait.until(ExpectedConditions.titleContains("trial"));
+		driver.get("https://se-bot-project.slack.com/messages/android_recommender");
+		wait.until(ExpectedConditions.titleContains("android_recommender"));
 
 		WebElement messageBot = driver.findElement(By.id("msg_input"));
 		assertNotNull(messageBot);
@@ -67,15 +67,18 @@ public class WebTest
 		Actions actions = new Actions(driver);
 		actions.moveToElement(messageBot);
 		actions.click();
-		actions.sendKeys("hello android recommender");
+		actions.sendKeys("UI");
 		actions.sendKeys(Keys.RETURN);
 		actions.build().perform();
+		
+		Thread.sleep(20000);
 
 		wait.withTimeout(3, TimeUnit.SECONDS).ignoring(StaleElementReferenceException.class);
 
-		WebElement msg = driver.findElement(
-				By.xpath("//span[@class='message_body' and text() = 'hello android recommender']"));
-		assertNotNull(msg);
+		List<WebElement> msgs = driver.findElements(
+				By.xpath("//span[@class='message_body']"));
+		
+		assertEquals(msgs.get(msgs.size() - 1).getText().contains("Recommendations"), true);
 	}
 	
 	@Test
@@ -104,14 +107,17 @@ public class WebTest
 		Actions actions = new Actions(driver);
 		actions.moveToElement(messageBot);
 		actions.click();
-		actions.sendKeys("hello android recommender");
+		actions.sendKeys("UI");
 		actions.sendKeys(Keys.RETURN);
 		actions.build().perform();
-
+		
+		Thread.sleep(10000);
 		wait.withTimeout(3, TimeUnit.SECONDS).ignoring(StaleElementReferenceException.class);
 
-		WebElement msg = driver.findElement(
-				By.xpath("//span[@class='message_body' and text() = 'xyz']"));
-		assertNull(msg);
+		List<WebElement> msgs = driver.findElements(
+				By.xpath("//span[@class='message_body']"));
+		
+		assertEquals(msgs.get(msgs.size() - 1).getText().contains("NOt Recommendations"), true);
+		
 	}
 }

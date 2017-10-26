@@ -1,11 +1,11 @@
 { 
 	"user_repos" :
 	[
-	  {"user": "dummy_user_a", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
+	  {"user": "U6VR2J4D6", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
 	  {"user": "dummy_user_b","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
 	  {"user": "dummy_user_c", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
-	  {"user": "dummy_user_d","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
-	  {"user": "dummy_user_e", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
+	  {"user": "U6VUFKKU1","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
+	  {"user": "U6VUCRAE5", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
 	],
 	"repos" :
 	[
@@ -33,6 +33,10 @@
 		"repo_id": 5,
 		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo5",
 		"files": ["EventAddActivity.java", "layout_activity.xml", "CalendarActivity.java", "BaseActivity.java", "ViewPageIndicator.java"]
+	  },
+	  {
+		  "status": "error",
+		  "message": "Please check if the repository exists!"
 	  }
 	],
 	"recommendations":[
@@ -86,6 +90,19 @@
 			"MrVector",
 			"Butter Knife"
 		]
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: Please check if the repository exists!"
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: No recommendations found! Please verify if the repository contains Android code"
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: Not enough privileges to access the repository!"
 	  }
+
 	]
   }
