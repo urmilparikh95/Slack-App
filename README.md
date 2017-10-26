@@ -27,6 +27,7 @@
 
 ## 4. Selenium Testing:  
    To support testing of your bot, we will use Selenium to verify that the bot is returning the correct response based on a input message.
+   Pre-requisite: Setup the environment variables in the Run Configurations of Eclipse for user email and password with variable name as SLACK_EMAIL and SLACK_PASSWORD.
 
 ## 5. Task Tracking:  
    
