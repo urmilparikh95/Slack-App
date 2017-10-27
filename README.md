@@ -48,4 +48,4 @@ For example, we have mocked github user data for the bot to use, that helps us t
 
 ## 6. Screencast:  
 
-Here is a link to our [screencast](https://youtu.be/1Mr0FigKzz8).
+Here is a link to our [screencast](https://youtu.be/ziP1kUdmZ00).
