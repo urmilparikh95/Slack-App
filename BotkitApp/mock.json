@@ -1,0 +1,108 @@
+{ 
+	"user_repos" :
+	[
+	  {"user": "U6VUCRAE5", "credential": {"oauth_token": "1205111512a1590f10aed15901"}, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
+	  {"user": "dummy_user_b","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
+	  {"user": "dummy_user_c", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
+	  {"user": "U6VUFKKU1","repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
+	  {"user": "dummy_user_e", "credential": { "email": "dummy_email@github.com", "password": "encrypted_password" }, "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo5"}
+	],
+	"repos" :
+	[
+	  {
+		"repo_id": 1,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo1",
+		"files": ["MainActivity.java", "layout_main.xml", "CalendarEventActivity.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 2,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo2",
+		"files": ["MainActivity.java", "layout_main.xml", "CalendarActivity.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 3,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo3",
+		"files": ["FancyListview.java", "DummyActivity.java", "CalendarActivity.java", "ViewPager.java"]
+	  },
+	  {
+		"repo_id": 4,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo4",
+		"files": ["MainActivity.java", "layout_main.xml", "ViewPageIndicator.java", "BaseActivity.java"]
+	  },
+	  {
+		"repo_id": 5,
+		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo5",
+		"files": ["EventAddActivity.java", "layout_activity.xml", "CalendarActivity.java", "BaseActivity.java", "ViewPageIndicator.java"]
+	  },
+	  {
+		  "status": "error",
+		  "message": "Please check if the repository exists!"
+	  }
+	],
+	"recommendations":[
+	  {
+		"recommendation_id": 1,
+		"code_libraries": [
+			"Picasso",
+			"Butter Knife",
+			"Gson",
+			"ActiveAndroid",
+			"EventBus",
+			"EasyCamera",
+			"RetroFit"
+		]
+	  },
+	  {
+		"recommendation_id": 2,
+		"ui_libraries": [
+			"ParallaxPagerTransformer",
+			"Caldroid",
+			"DiscreteSeekBar",
+			"SmoothProgressBar",
+			"MovingButton",
+			"Sweet Alert",
+			"GifImageView",
+			"Shimmer for Android"
+		]
+	  },
+	  {
+		"recommendation_id": 3,
+		"code_refactoring_suggestions": [
+			"Use dp instead of pixel values in layout.xml",
+			"Strings should be defined in strings.xml rather than in the layout.xml",
+			"Use build.gradle for building the project",
+			"Use styles to avoid duplication of UI code",
+			"Use proguard for code obfuscation",
+			"Put password and sensitive data in gradle.properties",
+			"Place launcher icons in mipmap-folders"
+		]
+	  },
+	  {
+		"recommendation_id": 4,
+		"code_refactoring_suggestions": [
+			"Include resources for xxxhdpi screens",
+			"Put password and sensitive data in gradle.properties"
+		],
+		"ui_libraries": [
+			"FadingActionBar"
+		],
+		"code_libraries": [
+			"MrVector",
+			"Butter Knife"
+		]
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: Please check if the repository exists!"
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: No recommendations found! Please verify if the repository contains Android code"
+	  },
+	  {
+		"status": "error",
+		"message": "ERROR: Not enough privileges to access the repository!"
+	  }
+
+	]
+  }
