@@ -4,15 +4,15 @@ var data = require("./mock.json");
 function loadMockData(database, github, droid){
     
     //Mock Data
-    var save = sinon.stub(database, "save");
-    save.withArgs({"name": "Test User1", "email": "dummy_email@bot.com"},
-        {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo1", "git_username": "dummy_email", "git_password": "dummy_password"})
+    var save = sinon.stub(database, "saveUserInfo");
+    save.withArgs('test_user1',
+        'https://github.ncsu.edu/dummy_user/dummy_repo1')
         .resolves(true);
     save.withArgs({"name": "Test User2", "email": "dummy_email@bot.com"},
         {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo2"})
         .rejects("Unable to store data in the database!");
     
-    var get = sinon.stub(database, "get");
+    var get = sinon.stub(database, "getUserInfo");
     get.withArgs(data.user_repos[0].user).resolves(data.user_repos[0]);
     get.withArgs(data.user_repos[1].user).resolves(data.user_repos[1]);
     get.withArgs(data.user_repos[2].user).resolves(data.user_repos[2]);
@@ -20,11 +20,11 @@ function loadMockData(database, github, droid){
     get.withArgs(data.user_repos[4].user).resolves(data.user_repos[4]);
 
     var github_mock = sinon.stub(github, "getFilesFromRepo");
-    github_mock.withArgs(data.user_repos[0].repo_link, data.user_repos[0].credential).resolves(data.repos[0]);
-    github_mock.withArgs(data.user_repos[1].repo_link, data.user_repos[1].credential).resolves(data.repos[1]);
-    github_mock.withArgs(data.user_repos[2].repo_link, data.user_repos[2].credential).resolves(data.repos[2]);
-    github_mock.withArgs(data.user_repos[3].repo_link, data.user_repos[3].credential).resolves(data.repos[3]);
-    github_mock.withArgs(data.user_repos[4].repo_link, data.user_repos[4].credential).resolves(data.repos[4]);
+    github_mock.withArgs(data.user_repos[0].repo_link).resolves(data.repos[0]);
+    github_mock.withArgs(data.user_repos[1].repo_link).resolves(data.repos[1]);
+    github_mock.withArgs(data.user_repos[2].repo_link).resolves(data.repos[2]);
+    github_mock.withArgs(data.user_repos[3].repo_link).resolves(data.repos[3]);
+    github_mock.withArgs(data.user_repos[4].repo_link).resolves(data.repos[4]);
 
     var droid_code_lib = sinon.stub(droid, "getCodeLibraries");
     droid_code_lib.withArgs(data.repos[0].files).resolves(data.recommendations[0]);

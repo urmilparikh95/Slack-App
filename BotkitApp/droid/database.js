@@ -5,14 +5,14 @@ function sleep (time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function save(user, git_data ){
+function saveUserInfo(user, git_data ){
 	return new Promise(function (resolve, reject) 
 	{
 			
 	});
 }
 
-function get(user){
+function getUserInfo(user){
 	return new Promise(function (resolve, reject) 
 	{
 		//Get git_data
@@ -20,5 +20,5 @@ function get(user){
 	});
 }
 
-exports.save = save;
-exports.get = get;
+exports.saveUserInfo = saveUserInfo;
+exports.getUserInfo = getUserInfo;
