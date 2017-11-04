@@ -26,7 +26,6 @@ function getCodeRefactoringSuggestions(file_list){
 		var list = ['Please use dp instead of pixels']
 		resolve(list);
 	});
-
 }
 
 function getAllSuggestions(file_list){
@@ -39,15 +38,15 @@ function getAllSuggestions(file_list){
 }
 
 function progressBarExists(file_content){
-	return true;
+	return false;
 }
 
 function calendarViewExists(file_content){
-	return true;
+	return false;
 }
 
 function viewPagerExists(file_content){
-	return true;
+	return false;
 }
 
 function asyncHttpClientExists(file_content){
@@ -55,42 +54,56 @@ function asyncHttpClientExists(file_content){
 	return (file_content.indexOf('com.loopj.android.http.AsyncHttpClient')) != -1
 }
 
-function analyze(file_content){
-	var ast = japa.parse(file_content);
-	var builder = new FileBuilder();
-	builder.FileName = "";
-	// Tranverse program with a function visitor.
-	traverseWithParents(ast, function (tree) 
-	{
-		builder.AsyncHttpClients = asyncHttpClientExists(file_content);
-		if (tree.node === 'ImportDeclaration') 
-		{
-			console.log(tree);
-			//TODO
+function analyze(fileListInput){
+	var builder = new FileListBuilder();
+	for(var i=0; i < fileListInput.length; i++){
+		var filePath = fileListInput[i].filePath;
+		var fileContents = fileListInput[i].fileContents;
+		//Handle .java as well as xml's
+		if (filePath.indexOf(".java") != -1){
+
+			if (asyncHttpClientExists(fileContents))
+				builder.AsyncHttpClient.push(filePath)
+			
+			//Sample code for JAVA parsing, if required
+			var ast = japa.parse(fileContents);
+			// Tranverse program with a function visitor.
+			traverseWithParents(ast, function (tree) 
+			{
+				if (tree.node === 'ImportDeclaration') 
+				{
+					// console.log(tree);
+					//TODO
+				}
+				//Sample
+			});
 		}
-	});
+	}
 	console.log("Builder: "+JSON.stringify(builder));
 	return builder;
 }
 
 // A builder for storing file level information.
-function FileBuilder()
+function FileListBuilder()
 {
-	this.FileName = "";
 	// AsyncHttpClient exists in file.
-	this.AsyncHttpClients = false;
-	// Number of imports in a file.
-	this.ImportCount = 0;
+	this.AsyncHttpClient = [];
+	// ProgressBar exists in file.
+	this.ProgressBar = [];
+	// ViewPager exists in file.
+	this.ViewPager = [];
+	// CalendarView exists in file.
+	this.CalendarView = [];
 
-	this.report = function()
-	{
-		console.log (
-			( "{0}\n" +
-			  "~~~~~~~~~~~~\n"+
-			  "ImportCount {1}\t" +
-			  "AsyncHttpClient: {2}\n"
-			).format( this.FileName, this.ImportCount, this.AsyncHttpClients ));
-	}
+	// this.report = function()
+	// {
+		// console.log (
+		// 	( "{0}\n" +
+		// 	  "~~~~~~~~~~~~\n"+
+		// 	  "ImportCount {1}\t" +
+		// 	  "AsyncHttpClient: {2}\n"
+		// 	).format( this.FileName, this.ImportCount, this.AsyncHttpClients ));
+	// }
 }
 
 // A function following the Visitor pattern.
