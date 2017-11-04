@@ -21,21 +21,21 @@ describe('droid_service', function(){
     it(' #analyze() must return true for ProgressBar in activity_test.xml', function(done) {
         var result = droid_service.analyze(fileListInput)
         expect(result).to.haveOwnProperty("ProgressBar"); 
-        expect(result.ProgressBar).to.be.an('array').to.include('test/activity_test.java');
+        expect(result.ProgressBar).to.be.an('array').to.include('test/activity_test.xml');
         done();
     });
 
     it(' #analyze() must return true for ViewPager in MainActivity.java', function(done) {
         var result = droid_service.analyze(fileListInput)
         expect(result).to.haveOwnProperty("ViewPager"); 
-        expect(result.ViewPager).to.be.an('array').to.include('test/activity_test.java');
+        expect(result.ViewPager).to.be.an('array').to.include('test/activity_test.xml');
         done();
     });
 
     it(' #analyze() must return true for CalendarView in MainActivity.java', function(done) {
         var result = droid_service.analyze(fileListInput)
         expect(result).to.haveOwnProperty("CalendarView"); 
-        expect(result.CalendarView).to.be.an('array').to.include('test/activity_test.java');
+        expect(result.CalendarView).to.be.an('array').to.include('test/activity_test.xml');
         done();
     });
 
