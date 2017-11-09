@@ -18,7 +18,7 @@ Other sub tasks:
 
 
   
-**Week 2 - 10/12/2017 to 10/17/2017**  
+**Week 2 - 10/12/2017 to 10/18/2017**  
 
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
@@ -38,7 +38,7 @@ Other sub tasks:
 
  
   
-**Week 3 - 10/18/2017 to 10/25/2017**  
+**Week 3 - 10/19/2017 to 10/25/2017**  
 
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
@@ -55,6 +55,52 @@ Other sub-tasks:
 * How to make the bot interactive?
 * Debugging some breaking code.  
 
+#### Service Milestone
 
-[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for entire project
+
+**Week 4 - 10/26/2017 to 11/1/2017**  
+
+
+| Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
+| ------------- | ------------  |  ------------ | ---------------
+| Bot Implementation | Completed |  | @all
+| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
+| Database functionality | In progress |  | @all
+| Bot Suggestions | - |  | @onjoshi
+| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+
+
+**Week 5 - 11/02/2017 to 11/08/2017**  
+
+
+
+| Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
+| ------------- | ------------  |  ------------ | ---------------
+| Bot Implementation | Completed |  | @all
+| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
+| Database functionality | In progress |  | @all
+| Bot Suggestions | - |  | @onjoshi
+| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+
+
+
+**Week 6 - 11/09/2017 to 11/14/2017**  
+
+
+
+| Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
+| ------------- | ------------  |  ------------ | ---------------
+| Bot Implementation | Completed |  | @all
+| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
+| Database functionality | In progress |  | @all
+| Bot Suggestions | - |  | @onjoshi
+| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+
+
+
+
+[Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for service milestone  
+
+[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for bot milestone
+
 
