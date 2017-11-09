@@ -1,0 +1,175 @@
+{ 
+	"AsyncHttpClient" :
+			{
+				"attachments": [
+					{
+						"fallback": "Required plain-text summary of the attachment.",
+						"color": "#86964f",
+						"pretext": "Use *RetroFit* library for web service calls instead of *AsyncHttpClient*",
+						"title": "RetroFit",
+						"title_link": "http://square.github.io/retrofit/",
+						"text": "RetroFit is a library from *Square* which turns your HTTP web service calls into a JAVA interface.",
+						"fields": [
+							{
+								"title": "What does it replace? How?",
+								"value": "RetroFit is a library which should be definitely used instead of basic HTTP calls using *AsyncHttpClient*. It automatically converts a *REST* service to a Plain Old JAVA object using *annotations* and avoids boiler plate code of parsing data from AsyncHttpClient.",
+								"short": false
+							},
+							{
+								"title": "Code Snippet",
+								"value": "```public interface GitHubService\n{\n @GET('users/{user}/repos')\n Call<List<Repo>> listRepos(@Path('user') String user);\n}\n\n\nRetrofit retrofit = new Retrofit.Builder().baseUrl('https://api.github.com/') \n.build();\nGitHubService service = retrofit.create(GitHubService.class);```",
+								"short": false
+							},
+							{
+								"title": "Alternatives",
+								"value": "<http://square.github.io/picasso/ | *Picasso*>",
+								"short": true
+							},
+							{
+								"title": "Features",
+								"value": "Best used for downlloading images from the web",
+								"short": true
+							},
+							{
+								"value": "<http://square.github.io/okhttp/ | *okHttp*>",
+								"short": true
+							},
+							{
+								"value": "Best for HTTP streaming",
+								"short": true
+							}
+						],
+						"mrkdwn_in": ["text", "pretext", "fields"]
+					}
+				]
+		},
+		"ProgressBar" :
+		{
+			"attachments": [
+					{
+							"fallback": "SmoothProgressBar Attachment",
+							"color": "#36a64f",
+							"pretext": "1. Use *SmoothProgressBar* library instead of Android's default *ProgressBar* library",
+							"title": "SmoothProgressBar",
+							"title_link": "https://github.com/castorflex/SmoothProgressBar",
+							"text": "*SmoothProgressBar* is a library allowing you to make a smooth indeterminate progress bar. You can either user your progress bars and set this drawable or use directly the SmoothProgressBarView.",
+							"image_url": "https://github.com/joshio1/awesome-android-ui/raw/master/art/SmoothProgressBar.gif",
+							"fields": [
+								{
+									"title": "How to use?",
+									"value": "<https://github.com/castorflex/SmoothProgressBar|*Usage Link*>",
+									"short": false
+							},
+									{
+											"title": "Code Snippet",
+											"value": "```//Add dependency in build.gradle\n\ndependencies {\n{\ncompile 'com.github.castorflex.smoothprogressbar:library:x.x.x'\n}\n\n//In any layout.xml use SmoothProgressBar as follows:\n\n<fr.castorflex.android.smoothprogressbar.SmoothProgressBar\nxmlns:android='http://schemas.android.com/apk/res/android'\nxmlns:app='http://schemas.android.com/apk/res-auto'/>```",
+											"short": false
+									}
+							],
+				"mrkdwn_in": ["text", "pretext", "fields"]
+					},
+					{
+							"fallback": "ElasticDownloadProgressbar Attachment",
+							"color": "#06004f",
+							"pretext": "2. Use *ElasticDownload* library instead of Android's default *ProgressBar* library",
+							"title": "ElasticDownload",
+							"image_url": "https://raw.githubusercontent.com/Tibolte/ElasticDownload/master/success.gif",
+							"title_link": "https://github.com/Tibolte/ElasticDownload",
+							"text": "ElasticDownload library is based on ProgressBar from Dribble.",
+							"fields": [
+								{
+									"title": "How to use?",
+									"value": "<https://github.com/Tibolte/ElasticDownload|*Usage Link*>",
+									"short": false
+								},
+									{
+											"title": "Code Snippet",
+											"value": "```//Add dependency in build.gradle\n\ndependencies {\n{\ncompile 'com.github.tibolte:elasticdownload:1.0.+'\n}\n\n//In any Activity which has progressbar use ElasticDownload as follows:\n\n@InjectView(R.id.elastic_download_view) ElasticDownloadView mElasticDownloadView;\nmElasticDownloadView.startIntro();\n mElasticDownloadView.setProgress(25);```",
+											"short": false
+									}
+							],
+								"mrkdwn_in": ["text", "pretext", "fields"]
+					}
+			]
+	},
+		"ViewPager" :
+		{
+			"attachments": [
+					{
+							"fallback": "SpringIndicator Attachment",
+							"color": "#00664f",
+							"pretext": "1. Use *SpringIndictor* ViewPage indicator UI library whenver you want to screen between pages or tabs.",
+							"title": "SpringIndicator",
+							"title_link": "https://github.com/chenupt/SpringIndicator",
+							"text": "*SpringIndicator* is a view page indicator inspired by <https://github.com/chenupt/BezierDemo | BeizerDemo>. Here is a <https://github.com/chenupt/SpringIndicator/raw/master/img/springindicator_1.0.1.apk | sample application> using SpringIndicator",
+							"image_url": "https://raw.githubusercontent.com/chenupt/SpringIndicator/master/img/si_1.0.0.gif",
+							"fields": [
+									{
+											"title": "How to use?",
+											"value": "<https://github.com/chenupt/SpringIndicator|*Usage Link*>",
+											"short": false
+									},
+									{
+											"title": "Code Snippet",
+											"value": "```//Add dependency in build.gradle\n\ndependencies {\n{\ncompile 'com.github.chenupt.android:springindicator:1.0.2@aar'\n}\n\n//In any layout.xml use SpringIndicator as follows:\n\n <github.chenupt.springindicator.SpringIndicator/>```",
+											"short": false
+									}
+							],
+				"mrkdwn_in": ["text", "pretext", "fields"]
+					}
+			]
+	},
+		"CalendarView" :
+		{
+			"attachments": [
+					{
+							"fallback": "SilkCal Attachment",
+							"color": "#66664f",
+							"pretext": "1. Make use of *SilkCal* UI library instead of Android framework's default *CalendarView*",
+							"title": "SilkCal",
+							"title_link": "https://github.com/NLMartian/SilkCal",
+							"text": "*SilkCal* is a  calendar view inspired by Sunrise calendar and iOS7 stock calendar.",
+							"image_url": "https://github.com/NLMartian/SilkCal/raw/master/images/screenshot.gif",
+							"fields": [
+									{
+											"title": "How to use?",
+											"value": "<https://github.com/NLMartian/SilkCal|*Usage Link*>",
+											"short": false
+									},
+									{
+											"title": "Code Snippet",
+											"value": "```//Add dependency in build.gradle\n\ndependencies {\n{\ncompile 'me.nlmartian.silkcal:library:0.1.1'\n}\n\n//In any layout.xml use SilkCal as follows:\n\n <me.nlmartian.silkcal.DayPickerView/>```",
+											"short": false
+									}
+							],
+				"mrkdwn_in": ["text", "pretext", "fields"]
+					}
+			]
+	},
+		"Pixels" :
+		{
+			"attachments": [
+					{
+							"fallback": "Pixel Attachment",
+							"color": "#f6a64f",
+							"pretext": "1. Please you use *dp* instead of *px* in layout.xml",
+							"title": "Density Independent Pixels",
+							"title_link": "https://developer.android.com/guide/practices/screens_support.html",
+							"text": "*Density Independent Pixels* such as dp or dip must be used when spcifying the width or height units in layout xml files.",
+							"fields": [
+									{
+											"title": "Why?",
+											"value": "UI elements having dimensions in pixels do not scale or adjust when user uses the same application on devices with different density or resolution. If units are mentioned in dp, the UI element *automatically resizes itself* to fit the screen appropriately.",
+											"short": false
+									},
+									{
+											"title": "How to modify?",
+											"value": "```1. Open all layout xml files in the /res folder of your application source code.\n2. Find all the places where px is used as units for width and height.\n3. Use dp instead of px.```",
+											"short": false
+									}
+							],
+				"mrkdwn_in": ["text", "pretext", "fields"]
+					}
+			]
+		}
+  }

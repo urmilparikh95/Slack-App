@@ -67,7 +67,33 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 						if (recommendations.status != undefined && recommendations.status === "error"){
 							convo.say(recommendations.message);
 						}else{
-							convo.say("Recommendations: "+JSON.stringify(recommendations));
+							// convo.say("Recommendations: "+JSON.stringify(recommendations));
+							convo.say({
+								"text": "Here are your recommendations!",
+								"attachments": [
+								  {
+									  "fallback": "Required plain-text summary of the attachment.",
+									  "color": "#36a64f",
+									  "pretext": "Use *RetroFit* library for web service calls instead of *AsyncHttpClient*",
+									  "title": "RetroFit",
+									  "title_link": "http://square.github.io/retrofit/",
+									  "text": "RetroFit is a library from *Square* which turns your HTTP web service calls into a JAVA interface.",
+									  "fields": [
+										  {
+											  "title": "What does it replace? How?",
+											  "value": "RetroFit is a library which should be definitely used instead of basic HTTP calls using *AsyncHttpClient*. It automatically converts a *REST* service to a Plain Old JAVA object using *annotations* and avoids boiler plate code of parsing data from AsyncHttpClient.",
+											  "short": false
+										  },
+										  {
+											  "title": "Code Snippet",
+											  "value": "```public interface GitHubService\n{\n @GET('users/{user}/repos')\n Call<List<Repo>> listRepos(@Path('user') String user);\n}\n\n\nRetrofit retrofit = new Retrofit.Builder().baseUrl('https://api.github.com/') \n.build();\nGitHubService service = retrofit.create(GitHubService.class);```",
+											  "short": false
+										  }
+									  ],
+									  "mrkdwn_in": ["text", "pretext", "fields"]
+								  }
+								]
+							  });
 						}
 					}).catch(function(error){
 						convo.say("Recommendations could not be fetched!");
@@ -85,7 +111,7 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 	  });
 });
 
-controller.hears('libraries','direct_message', function(bot,message) 
+controller.hears('libraries',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {
 	console.log(message);
 	bot.startConversation(message, function(err, convo) {
@@ -212,7 +238,33 @@ function suggesCodeLibraries(repo_link, credential, convo){
 				}else{
 					console.log("Recommendations: "+JSON.stringify(recommendations));
 					convo.say("We suggest you these following core code libraries improve the quality of your code ..")
-					convo.say("Recommendations: "+JSON.stringify(recommendations));
+					// convo.say("Recommendations: "+JSON.stringify(recommendations));
+					convo.say({
+						"text": "Here are your recommendations!",
+						"attachments": [
+						  {
+							  "fallback": "Required plain-text summary of the attachment.",
+							  "color": "#36a64f",
+							  "pretext": "Use *RetroFit* library for web service calls instead of *AsyncHttpClient*",
+							  "title": "RetroFit",
+							  "title_link": "http://square.github.io/retrofit/",
+							  "text": "RetroFit is a library from *Square* which turns your HTTP web service calls into a JAVA interface.",
+							  "fields": [
+								  {
+									  "title": "What does it replace? How?",
+									  "value": "RetroFit is a library which should be definitely used instead of basic HTTP calls using *AsyncHttpClient*. It automatically converts a *REST* service to a Plain Old JAVA object using *annotations* and avoids boiler plate code of parsing data from AsyncHttpClient.",
+									  "short": false
+								  },
+								  {
+									  "title": "Code Snippet",
+									  "value": "```public interface GitHubService\n{\n @GET('users/{user}/repos')\n Call<List<Repo>> listRepos(@Path('user') String user);\n}\n\n\nRetrofit retrofit = new Retrofit.Builder().baseUrl('https://api.github.com/') \n.build();\nGitHubService service = retrofit.create(GitHubService.class);```",
+									  "short": false
+								  }
+							  ],
+							  "mrkdwn_in": ["text", "pretext", "fields"]
+						  }
+						]
+					  });
 				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
