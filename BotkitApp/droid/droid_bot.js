@@ -4,7 +4,7 @@ var droid_service = require('./droid_service');
 var github = require('./github');
 var bluebird = require('bluebird');
 var sinon = require('sinon');
-var data = require("./mock.json");
+var droid_data = require("./droid_data.json");
 
 var mock = require("./mock.js");
 
@@ -16,7 +16,7 @@ var currentUser;
 var repo_link;
 var credential;
 
-controller.hears('config',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
+controller.hears('configure',['ambient','mention', 'direct_mention','direct_message'], function(bot,message) 
 {	
 	currentUser = message.user
 	bot.startConversation(message, register)
@@ -28,7 +28,7 @@ register = function(response, convo) {
 		repo_link = response.text;
 		if (repo_link){
 			convo.say("Great! Let me store this in my database..");
-			saveUserGitInfo("test_user1", "https://github.ncsu.edu/dummy_user/dummy_repo1", convo);
+			saveUserGitInfo("test_user1", "https://github.com/joshio1/DroidRecommenderAndroidSample", convo);
 		}else{
 			convo.say("Darn! Some problem getting git repository from the user!");
 		}
@@ -67,33 +67,13 @@ controller.hears('UI',['ambient','mention', 'direct_mention','direct_message'], 
 						if (recommendations.status != undefined && recommendations.status === "error"){
 							convo.say(recommendations.message);
 						}else{
-							// convo.say("Recommendations: "+JSON.stringify(recommendations));
-							convo.say({
-								"text": "Here are your recommendations!",
-								"attachments": [
-								  {
-									  "fallback": "Required plain-text summary of the attachment.",
-									  "color": "#36a64f",
-									  "pretext": "Use *RetroFit* library for web service calls instead of *AsyncHttpClient*",
-									  "title": "RetroFit",
-									  "title_link": "http://square.github.io/retrofit/",
-									  "text": "RetroFit is a library from *Square* which turns your HTTP web service calls into a JAVA interface.",
-									  "fields": [
-										  {
-											  "title": "What does it replace? How?",
-											  "value": "RetroFit is a library which should be definitely used instead of basic HTTP calls using *AsyncHttpClient*. It automatically converts a *REST* service to a Plain Old JAVA object using *annotations* and avoids boiler plate code of parsing data from AsyncHttpClient.",
-											  "short": false
-										  },
-										  {
-											  "title": "Code Snippet",
-											  "value": "```public interface GitHubService\n{\n @GET('users/{user}/repos')\n Call<List<Repo>> listRepos(@Path('user') String user);\n}\n\n\nRetrofit retrofit = new Retrofit.Builder().baseUrl('https://api.github.com/') \n.build();\nGitHubService service = retrofit.create(GitHubService.class);```",
-											  "short": false
-										  }
-									  ],
-									  "mrkdwn_in": ["text", "pretext", "fields"]
-								  }
-								]
-							  });
+							// console.log(Json.stringify(recommendations));
+							convo.say("Here are your UI recommendations");
+							for (let key of Object.keys(recommendations)) {
+								if (droid_data.hasOwnProperty(key)){
+									convo.say(droid_data[key]);	
+								}
+							}
 						}
 					}).catch(function(error){
 						convo.say("Recommendations could not be fetched!");
@@ -133,6 +113,7 @@ findRecommendations = function (result, convo)
 		attachments:[
 			{
 				title: 'Which type of recommendations do you want?',
+				text: "`UI` means UI library recommendations eg. *Buttons, ProgressBar* etc. \n `Code` signifies libraries for your core JAVA Android Code eg. *HTTP Network Calls* \n `General` includes Code Refactoring Tips according to Android best practices",
 				callback_id: result.repo_link+"-"+result.credential,
 				attachment_type: 'default',
 				actions: [
@@ -160,7 +141,8 @@ findRecommendations = function (result, convo)
 						"value": "All",
 						"type": "button",
 					}
-				]
+				],
+				"mrkdwn_in": ["text", "title"]
 			}
 		]},
 		[
@@ -213,7 +195,12 @@ function suggesUiLibraries(repo_link, credential, convo){
 				}else{
 					convo.say("We suggest you these following UI libraries improve the quality of your code ..")
 					console.log("Recommendations: "+JSON.stringify(recommendations));
-					convo.say("Recommendations: "+JSON.stringify(recommendations));
+					// convo.say("Recommendations: "+JSON.stringify(recommendations));
+					for (let key of Object.keys(recommendations)) {
+						if (droid_data.hasOwnProperty(key)){
+							convo.say(droid_data[key]);	
+						}
+					}
 				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
@@ -237,34 +224,13 @@ function suggesCodeLibraries(repo_link, credential, convo){
 					convo.say(recommendations.message);
 				}else{
 					console.log("Recommendations: "+JSON.stringify(recommendations));
-					convo.say("We suggest you these following core code libraries improve the quality of your code ..")
+					convo.say("We suggest you these following libraries to imporve your core JAVA Android code..")
 					// convo.say("Recommendations: "+JSON.stringify(recommendations));
-					convo.say({
-						"text": "Here are your recommendations!",
-						"attachments": [
-						  {
-							  "fallback": "Required plain-text summary of the attachment.",
-							  "color": "#36a64f",
-							  "pretext": "Use *RetroFit* library for web service calls instead of *AsyncHttpClient*",
-							  "title": "RetroFit",
-							  "title_link": "http://square.github.io/retrofit/",
-							  "text": "RetroFit is a library from *Square* which turns your HTTP web service calls into a JAVA interface.",
-							  "fields": [
-								  {
-									  "title": "What does it replace? How?",
-									  "value": "RetroFit is a library which should be definitely used instead of basic HTTP calls using *AsyncHttpClient*. It automatically converts a *REST* service to a Plain Old JAVA object using *annotations* and avoids boiler plate code of parsing data from AsyncHttpClient.",
-									  "short": false
-								  },
-								  {
-									  "title": "Code Snippet",
-									  "value": "```public interface GitHubService\n{\n @GET('users/{user}/repos')\n Call<List<Repo>> listRepos(@Path('user') String user);\n}\n\n\nRetrofit retrofit = new Retrofit.Builder().baseUrl('https://api.github.com/') \n.build();\nGitHubService service = retrofit.create(GitHubService.class);```",
-									  "short": false
-								  }
-							  ],
-							  "mrkdwn_in": ["text", "pretext", "fields"]
-						  }
-						]
-					  });
+					for (let key of Object.keys(recommendations)) {
+						if (droid_data.hasOwnProperty(key)){
+							convo.say(droid_data[key]);	
+						}
+					}
 				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
@@ -288,8 +254,13 @@ function suggesCodeRefactorings(repo_link, credential, convo){
 					convo.say(recommendations.message);
 				}else{
 					console.log("Recommendations: "+JSON.stringify(recommendations));
-					convo.say("We suggest you these following things to improve the quality of your code ..")
-					convo.say("Suggestions: "+JSON.stringify(recommendations));
+					convo.say("We suggest you these following code refactoring tips to improve the quality of your code ..")
+					// convo.say("Suggestions: "+JSON.stringify(recommendations));
+					for (let key of Object.keys(recommendations)) {
+						if (droid_data.hasOwnProperty(key)){
+							convo.say(droid_data[key]);	
+						}
+					}
 				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");
@@ -314,7 +285,12 @@ function suggestAllImprovements(repo_link, credential, convo){
 				}else{
 					console.log("Recommendations: "+JSON.stringify(recommendations));
 					convo.say("We suggest you these following things to improve the quality of your code ..")
-					convo.say("Recommendations: "+JSON.stringify(recommendations));
+					// convo.say("Recommendations: "+JSON.stringify(recommendations));
+					for (let key of Object.keys(recommendations)) {
+						if (droid_data.hasOwnProperty(key)){
+							convo.say(droid_data[key]);	
+						}
+					}
 				}
 			}).catch(function(error){
 				convo.say("Recommendations could not be fetched!");

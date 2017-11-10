@@ -1,7 +1,7 @@
 { 
 	"user_repos" :
 	[
-	  {"user": "U6VUCRAE5", "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo1"},
+	  {"user": "U6VUCRAE5", "repo_link":"https://github.com/joshio1/DroidRecommenderAndroidSample"},
 	  {"user": "dummy_user_b", "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo2"},
 	  {"user": "dummy_user_c", "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo3"},
 	  {"user": "U6VUFKKU1", "repo_link":"https://github.ncsu.edu/dummy_user/dummy_repo4"},
@@ -11,7 +11,7 @@
 	[
 	  {
 		"repo_id": 1,
-		"repo_link": "https://github.ncsu.edu/dummy_user/dummy_repo1",
+		"repo_link": "https://github.com/joshio1/DroidRecommenderAndroidSample",
 		"files": [
 				{
 					"filePath": "MainActivity.java",
@@ -187,7 +187,28 @@
 	  {
 		"status": "error",
 		"message": "ERROR: Not enough privileges to access the repository!"
-	  }
-
+		},
+		{
+			"type": "All",
+			"AsyncHttpClient": ["MainActivity"],
+			"ProgressBar": ["layout_activity.xml"],
+			"Pixels": ["layout_activity.xml"],
+			"CalendarView": ["activity_main.xml"]
+		},
+		{
+			"type": "UI",
+			"ProgressBar": ["layout_activity.xml"],
+			"CalendarView": ["activity_main.xml"]
+		},
+		{
+			"type": "Code",
+			"AsyncHttpClient": ["MainActivity"],
+			"CalendarView": []
+		},
+		{
+			"type": "General",
+			"AsyncHttpClient": [],
+			"Pixels": ["layout_activity.xml"]
+		}
 	]
   }

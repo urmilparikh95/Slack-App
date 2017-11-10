@@ -49,7 +49,7 @@
 					{
 							"fallback": "SmoothProgressBar Attachment",
 							"color": "#36a64f",
-							"pretext": "1. Use *SmoothProgressBar* library instead of Android's default *ProgressBar* library",
+							"pretext": "Use *SmoothProgressBar* library instead of Android's default *ProgressBar* library",
 							"title": "SmoothProgressBar",
 							"title_link": "https://github.com/castorflex/SmoothProgressBar",
 							"text": "*SmoothProgressBar* is a library allowing you to make a smooth indeterminate progress bar. You can either user your progress bars and set this drawable or use directly the SmoothProgressBarView.",
@@ -71,7 +71,7 @@
 					{
 							"fallback": "ElasticDownloadProgressbar Attachment",
 							"color": "#06004f",
-							"pretext": "2. Use *ElasticDownload* library instead of Android's default *ProgressBar* library",
+							"pretext": "Use *ElasticDownload* library instead of Android's default *ProgressBar* library",
 							"title": "ElasticDownload",
 							"image_url": "https://raw.githubusercontent.com/Tibolte/ElasticDownload/master/success.gif",
 							"title_link": "https://github.com/Tibolte/ElasticDownload",
@@ -98,7 +98,7 @@
 					{
 							"fallback": "SpringIndicator Attachment",
 							"color": "#00664f",
-							"pretext": "1. Use *SpringIndictor* ViewPage indicator UI library whenver you want to screen between pages or tabs.",
+							"pretext": "Use *SpringIndictor* ViewPage indicator UI library whenver you want to screen between pages or tabs.",
 							"title": "SpringIndicator",
 							"title_link": "https://github.com/chenupt/SpringIndicator",
 							"text": "*SpringIndicator* is a view page indicator inspired by <https://github.com/chenupt/BezierDemo | BeizerDemo>. Here is a <https://github.com/chenupt/SpringIndicator/raw/master/img/springindicator_1.0.1.apk | sample application> using SpringIndicator",
@@ -124,8 +124,8 @@
 			"attachments": [
 					{
 							"fallback": "SilkCal Attachment",
-							"color": "#66664f",
-							"pretext": "1. Make use of *SilkCal* UI library instead of Android framework's default *CalendarView*",
+							"color": "#439FE0",
+							"pretext": "Make use of *SilkCal* UI library instead of Android framework's default *CalendarView*",
 							"title": "SilkCal",
 							"title_link": "https://github.com/NLMartian/SilkCal",
 							"text": "*SilkCal* is a  calendar view inspired by Sunrise calendar and iOS7 stock calendar.",
@@ -152,7 +152,7 @@
 					{
 							"fallback": "Pixel Attachment",
 							"color": "#f6a64f",
-							"pretext": "1. Please you use *dp* instead of *px* in layout.xml",
+							"pretext": "Please you use *dp* instead of *px* in layout.xml",
 							"title": "Density Independent Pixels",
 							"title_link": "https://developer.android.com/guide/practices/screens_support.html",
 							"text": "*Density Independent Pixels* such as dp or dip must be used when spcifying the width or height units in layout xml files.",

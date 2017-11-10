@@ -6,7 +6,7 @@ function loadMockData(database, github, droid){
     //Mock Data
     var save = sinon.stub(database, "saveUserInfo");
     save.withArgs('test_user1',
-        'https://github.ncsu.edu/dummy_user/dummy_repo1')
+        'https://github.com/joshio1/DroidRecommenderAndroidSample')
         .resolves(true);
     save.withArgs({"name": "Test User2", "email": "dummy_email@bot.com"},
         {"git_repo_url": "https://github.ncsu.edu/dummy_user/dummy_repo2"})
@@ -27,32 +27,32 @@ function loadMockData(database, github, droid){
     github_mock.withArgs(data.user_repos[4].repo_link).resolves(data.repos[4]);
 
     var droid_code_lib = sinon.stub(droid, "getCodeLibraries");
-    droid_code_lib.withArgs(data.repos[0].files).resolves(data.recommendations[0]);
-    droid_code_lib.withArgs(data.repos[1].files).resolves(data.recommendations[0]);
-    droid_code_lib.withArgs(data.repos[2].files).resolves(data.recommendations[0]);
-    droid_code_lib.withArgs(data.repos[3].files).resolves(data.recommendations[0]);
-    droid_code_lib.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
+    droid_code_lib.withArgs(data.repos[0].files).resolves(data.recommendations[9]);
+    droid_code_lib.withArgs(data.repos[1].files).resolves(data.recommendations[9]);
+    droid_code_lib.withArgs(data.repos[2].files).resolves(data.recommendations[9]);
+    droid_code_lib.withArgs(data.repos[3].files).resolves(data.recommendations[9]);
+    droid_code_lib.withArgs(data.repos[4].files).resolves(data.recommendations[9]);
 
     var droid_ui_lib = sinon.stub(droid, "getUiLibraries");
-    droid_ui_lib.withArgs(data.repos[0].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[1].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[2].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[3].files).resolves(data.recommendations[1]);
-    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[6]);
+    droid_ui_lib.withArgs(data.repos[0].files).resolves(data.recommendations[8]);
+    droid_ui_lib.withArgs(data.repos[1].files).resolves(data.recommendations[8]);
+    droid_ui_lib.withArgs(data.repos[2].files).resolves(data.recommendations[8]);
+    droid_ui_lib.withArgs(data.repos[3].files).resolves(data.recommendations[8]);
+    droid_ui_lib.withArgs(data.repos[4].files).resolves(data.recommendations[8]);
 
     var droid_refactorings = sinon.stub(droid, "getCodeRefactoringSuggestions");
-    droid_refactorings.withArgs(data.repos[0].files).resolves(data.recommendations[2]);
-    droid_refactorings.withArgs(data.repos[1].files).resolves(data.recommendations[2]);
-    droid_refactorings.withArgs(data.repos[2].files).resolves(data.recommendations[2]);
-    droid_refactorings.withArgs(data.repos[3].files).resolves(data.recommendations[2]);
-    droid_refactorings.withArgs(data.repos[4].files).resolves(data.recommendations[4]);
+    droid_refactorings.withArgs(data.repos[0].files).resolves(data.recommendations[10]);
+    droid_refactorings.withArgs(data.repos[1].files).resolves(data.recommendations[10]);
+    droid_refactorings.withArgs(data.repos[2].files).resolves(data.recommendations[10]);
+    droid_refactorings.withArgs(data.repos[3].files).resolves(data.recommendations[10]);
+    droid_refactorings.withArgs(data.repos[4].files).resolves(data.recommendations[10]);
 
     var droid_all = sinon.stub(droid, "getAllSuggestions");
-    droid_all.withArgs(data.repos[0].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[1].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[2].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[3].files).resolves(data.recommendations[3]);
-    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[5]);
+    droid_all.withArgs(data.repos[0].files).resolves(data.recommendations[7]);
+    droid_all.withArgs(data.repos[1].files).resolves(data.recommendations[7]);
+    droid_all.withArgs(data.repos[2].files).resolves(data.recommendations[7]);
+    droid_all.withArgs(data.repos[3].files).resolves(data.recommendations[7]);
+    droid_all.withArgs(data.repos[4].files).resolves(data.recommendations[7]);
 
 }
 
