@@ -21,17 +21,23 @@ function saveUserInfo(user, git_data){
 function getUserInfo(user){
 	return new Promise(function (resolve, reject) 
 	{
-		var git_data;
 		controller.storage.users.get(user, function(error, data){
-			git_data = data.git_repo;
+			console.log(error);
+			if(error){
+				reject("Error occured in fetching the data");
+			}
+			resolve(data.git_repo);
 		});
-		resolve(git_data);
 	});
 }
 
-//saveUserInfo("xyz", "http://www.github.com/xyyzz");
-//saveUserInfo("xyzzzzz", "http://www.github.com/xyz");
-//console.log("@@@@@@@@@@@@@@@@@@"+getUserInfo("xyz"));
+/*saveUserInfo("xyz", "http://www.github.com/xyyzz");
+saveUserInfo("xyzzzzz", "http://www.github.com/xyz");
+getUserInfo("xyz").then(function (result){
+	console.log(result);
+}).catch(function(error){
+	console.log(error);
+});*/
 
 exports.saveUserInfo = saveUserInfo;
 exports.getUserInfo = getUserInfo;

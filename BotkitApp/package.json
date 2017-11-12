@@ -17,6 +17,7 @@
     "express": "^4.14.0",
     "java-parser": "0.0.2",
     "morgan": "",
+    "mongodb": "^1.4.39",
     "node-env-file": "^0.1.8",
     "querystring": "^0.2.0",
     "request": "^2.79.0",
