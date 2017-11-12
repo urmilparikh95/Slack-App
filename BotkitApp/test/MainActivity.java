@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.app.NotificationManager;
 import android.support.v4.app.NotificationCompat;
 import android.app.Notification;
+import android.support.v4.view.ViewPager;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.wolfhackers.counsellink.ExpandClass;

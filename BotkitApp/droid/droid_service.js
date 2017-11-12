@@ -37,20 +37,24 @@ function getAllSuggestions(file_list){
 	});
 }
 
+// Here we check if the file contains a specific keyword in order to provide suggestions 
 function progressBarExists(file_content){
-	return false;
+	// checking if the code uses this type of object
+	return (file_content.indexOf('ProgressBar')) != -1
 }
 
 function calendarViewExists(file_content){
-	return false;
+	// checking if the code uses this type of object
+	return (file_content.indexOf('CalendarView')) != -1
 }
 
 function viewPagerExists(file_content){
-	return false;
+	// checking if the code uses this type of object
+	return (file_content.indexOf('android.support.v4.view.ViewPager')) != -1
 }
 
 function asyncHttpClientExists(file_content){
-	//TODO
+	// checking if the code uses this type of object
 	return (file_content.indexOf('com.loopj.android.http.AsyncHttpClient')) != -1
 }
 
@@ -62,9 +66,14 @@ function analyze(fileListInput){
 		//Handle .java as well as xml's
 		if (filePath.indexOf(".java") != -1){
 
-			if (asyncHttpClientExists(fileContents))
+			if (asyncHttpClientExists(fileContents)){
 				builder.AsyncHttpClient.push(filePath)
+			}
 			
+			if (viewPagerExists(fileContents)){
+				builder.ViewPager.push(filePath)
+			}
+
 			//Sample code for JAVA parsing, if required
 			var ast = japa.parse(fileContents);
 			// Tranverse program with a function visitor.
@@ -77,6 +86,19 @@ function analyze(fileListInput){
 				}
 				//Sample
 			});
+
+
+		}
+		else if(filePath.indexOf(".xml") != -1){
+
+			if (progressBarExists(fileContents)){
+				builder.ProgressBar.push(filePath)
+			}
+
+			if (calendarViewExists(fileContents)){
+				builder.CalendarView.push(filePath)
+			}
+
 		}
 	}
 	console.log("Builder: "+JSON.stringify(builder));
