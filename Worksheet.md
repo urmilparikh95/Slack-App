@@ -55,7 +55,11 @@ Other sub-tasks:
 * How to make the bot interactive?
 * Debugging some breaking code.  
 
-#### Service Milestone
+#### Service Milestone  
+
+Each of the Use case was divided into common functionalities. And instead of working on each Use case, we decide to work on the functionalities and divided the task among the team members accordingly.  
+
+
 
 **Week 4 - 10/26/2017 to 11/1/2017**  
 
