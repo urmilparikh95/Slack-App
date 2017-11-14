@@ -57,50 +57,61 @@ Other sub-tasks:
 
 #### Service Milestone
 
-
 **Week 4 - 10/26/2017 to 11/1/2017**  
 
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Enhancing UI reporting on slack | Planning |  | @onjoshi
+| Bot Implementation | In Progress | Needed a bit of changes | @all
+| Github functionality | In progress |  | @gmkhande, @skkulkar
+| Database functionality | In progress |  | @scyadav,@uparikh
+| Bot Recommendations | In Progress |  | @onjoshi
+
+
+
+Other sub-tasks:
+* How to enhance the slack message reporting?
+* Debugging some breaking code.  
 
 
 **Week 5 - 11/02/2017 to 11/08/2017**  
 
 
-
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Enhancing UI reporting on slack | 80% done |  | @onjoshi
+| Bot Implementation | Completed | Small changes were added | @all
+| Github functionality | 40% done |  | @gmkhande, @skkulkar
+| Database functionality | 20% done |  | @scyadav,@uparikh
+| Bot Recommendations | In Progress |  | @onjoshi  
 
 
+
+Other sub-tasks:
+* Using the github file contents to provide recommendations.  
 
 **Week 6 - 11/09/2017 to 11/14/2017**  
 
 
 
+
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Enhancing UI reporting on slack | Completed |  | @onjoshi
+| Bot Implementation | Completed | Small changes were added | @all
+| Github functionality | Completed |  | @gmkhande, @skkulkar
+| Database functionality | Completed |  | @scyadav,@uparikh
+| Bot Recommendations | Completed |  | @onjoshi
 
 
 
+Other sub-tasks:
+* Debugging was required to integrate all the functionalities.
 
-[Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for service milestone  
 
-[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for bot milestone
+[Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for **SERVICE MILESTONE**  
+
+[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for **BOT MILESTONE**
 
 
