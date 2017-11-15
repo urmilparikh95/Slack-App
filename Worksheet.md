@@ -66,9 +66,9 @@ Each of the Use case was divided into common functionalities. And instead of wor
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Enhancing UI reporting on slack | Planning | Reforming slackbot interactivity asked in Feedback | @onjoshi
+| Enhancing UI reporting on slack | Planning | Reforming slackbot interactivity as per Feedback | @onjoshi
 | Bot Implementation | In Progress | Needed a bit of changes | @all
-| Github functionality | In progress |  | @gmkhande, @skkulkar
+| Github functionality | In progress | Fetching file contents to read and parse | @gmkhande, @skkulkar
 | Database functionality | In progress | Username, repo storage | @scyadav,@uparikh
 | Bot Recommendations | In Progress | Dividing use cases into functionalities | @onjoshi
 
@@ -104,7 +104,7 @@ Other sub-tasks:
 | ------------- | ------------  |  ------------ | ---------------
 | Enhancing UI reporting on slack | Completed |  | @onjoshi
 | Bot Implementation | Completed |  | @all
-| Github functionality | Completed |  | @gmkhande, @skkulkar
+| Github functionality | Completed | Fetching file contents to read and parse | @gmkhande, @skkulkar
 | Database functionality | Completed |  | @scyadav,@uparikh
 | Bot Recommendations | Completed | Recommendations for all 3 use cases | @onjoshi
 
