@@ -106,7 +106,7 @@ Other sub-tasks:
 | Bot Implementation | Completed |  | @all
 | Github functionality | Completed |  | @gmkhande, @skkulkar
 | Database functionality | Completed |  | @scyadav,@uparikh
-| Bot Recommendations | Completed | Recommndations for all 3 use cases | @onjoshi
+| Bot Recommendations | Completed | Recommendations for all 3 use cases | @onjoshi
 
 
 
