@@ -38,24 +38,28 @@ function getFilesFromRepo(repo_url){
 
 function createWebHook()
 {
-
 	var options = {
 		url: urlRoot + "/repos/" + owner + "/" + repo +"/hooks",
 		method: 'POST',
 		json: true,
 		headers: {
 			"User-Agent": "EnableIssues",
-			"Authorization": token,
-			"name": "web",
-			"active": true,
-			"events": "pull_request",
-			"config":{
-				//testing purposes
-				"url": "https://requestb.in/120y4op1",
-				"content-type": "json"
-
-
+			"Authorization": token
 			},
+
+			json:
+			{
+
+				"name": "web",
+				"active": true,
+				"events": [
+    		"pull_request"
+  			],
+				"config":{
+					"url": "https://requestb.in/rby5s0rb",
+					"content-type": "json"
+
+			}
 
 		},
 		body : {
@@ -69,9 +73,10 @@ function createWebHook()
 	request(options, function (error, response, body)
 	{
 		//print the response
-		console.log(body);
+		//console.log(body);
 
 	});
+	
 }
 
 
