@@ -66,11 +66,11 @@ Each of the Use case was divided into common functionalities. And instead of wor
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Enhancing UI reporting on slack | Planning |  | @onjoshi
+| Enhancing UI reporting on slack | Planning | Reforming slackbot interactivity asked in Feedback | @onjoshi
 | Bot Implementation | In Progress | Needed a bit of changes | @all
 | Github functionality | In progress |  | @gmkhande, @skkulkar
-| Database functionality | In progress |  | @scyadav,@uparikh
-| Bot Recommendations | In Progress |  | @onjoshi
+| Database functionality | In progress | Username, repo storage | @scyadav,@uparikh
+| Bot Recommendations | In Progress | Dividing use cases into functionalities | @onjoshi
 
 
 
@@ -84,11 +84,11 @@ Other sub-tasks:
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Enhancing UI reporting on slack | 80% done |  | @onjoshi
+| Enhancing UI reporting on slack | 80% done | Reforming slackbot interactivity as per Feedback| @onjoshi
 | Bot Implementation | Completed | Small changes were added | @all
-| Github functionality | 40% done |  | @gmkhande, @skkulkar
-| Database functionality | 20% done | Fetching file contents to read and parse | @scyadav,@uparikh
-| Bot Recommendations | In Progress |  | @onjoshi  
+| Github functionality | 40% done | Fetching file contents to read and parse | @gmkhande, @skkulkar
+| Database functionality | 20% done |  | @scyadav,@uparikh
+| Bot Recommendations | In Progress | Working on each of the functionalities | @onjoshi  
 
 
 
