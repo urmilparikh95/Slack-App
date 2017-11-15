@@ -55,7 +55,10 @@ Other sub-tasks:
 * How to make the bot interactive?
 * Debugging some breaking code.  
 
-#### Service Milestone
+# Service Milestone  
+
+Each of the Use case was divided into common functionalities. And instead of working on each Use case, we decide to work on the functionalities and divided the task among the team members accordingly.  
+
 
 
 **Week 4 - 10/26/2017 to 11/1/2017**  
@@ -63,44 +66,56 @@ Other sub-tasks:
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Enhancing UI reporting on slack | Planning | Reforming slackbot interactivity as per Feedback | @onjoshi
+| Bot Implementation | In Progress | Needed a bit of changes | @all
+| Github functionality | In progress | Fetching file contents to read and parse | @gmkhande, @skkulkar
+| Database functionality | In progress | Username, repo storage | @scyadav,@uparikh
+| Bot Recommendations | In Progress | Dividing use cases into functionalities | @onjoshi
+
+
+
+Other sub-tasks:
+* How to enhance the slack message reporting?
+* Debugging some breaking code.  
 
 
 **Week 5 - 11/02/2017 to 11/08/2017**  
 
 
-
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Enhancing UI reporting on slack | 80% done | Reforming slackbot interactivity as per Feedback| @onjoshi
+| Bot Implementation | Completed | Small changes were added | @all
+| Github functionality | 40% done | Fetching file contents to read and parse | @gmkhande, @skkulkar
+| Database functionality | 20% done |  | @scyadav,@uparikh
+| Bot Recommendations | In Progress | Working on each of the functionalities | @onjoshi  
 
 
+
+Other sub-tasks:
+* Using the github file contents to provide recommendations.  
 
 **Week 6 - 11/09/2017 to 11/14/2017**  
 
 
 
+
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
+| Enhancing UI reporting on slack | Completed |  | @onjoshi
 | Bot Implementation | Completed |  | @all
-| Github functionality | In progress |  | @scyadav, @onjoshi, @uparikh
-| Database functionality | In progress |  | @all
-| Bot Suggestions | - |  | @onjoshi
-| Reporting Enhancements | - |  | @gmkhande, @skkulkar
+| Github functionality | Completed | Fetching file contents to read and parse | @gmkhande, @skkulkar
+| Database functionality | Completed |  | @scyadav,@uparikh
+| Bot Recommendations | Completed | Recommendations for all 3 use cases | @onjoshi
 
 
 
+Other sub-tasks:
+* Debugging was required to integrate all the functionalities.
 
-[Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for service milestone  
 
-[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for bot milestone
+[Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for **SERVICE MILESTONE**  
+
+[Trello link](https://trello.com/b/TOCZ77rb/android-recommender) for **BOT MILESTONE**
 
 
