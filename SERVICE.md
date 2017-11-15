@@ -6,3 +6,7 @@
 ### Worksheet
 
 Here is a link to our [worksheet](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md)
+
+### Code
+
+The following [BotkitApp](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/tree/master/BotkitApp) folder contains the code for the implementation of all our modules
