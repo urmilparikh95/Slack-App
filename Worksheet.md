@@ -55,7 +55,7 @@ Other sub-tasks:
 * How to make the bot interactive?
 * Debugging some breaking code.  
 
-#### Service Milestone  
+# Service Milestone  
 
 Each of the Use case was divided into common functionalities. And instead of working on each Use case, we decide to work on the functionalities and divided the task among the team members accordingly.  
 
@@ -87,7 +87,7 @@ Other sub-tasks:
 | Enhancing UI reporting on slack | 80% done |  | @onjoshi
 | Bot Implementation | Completed | Small changes were added | @all
 | Github functionality | 40% done |  | @gmkhande, @skkulkar
-| Database functionality | 20% done |  | @scyadav,@uparikh
+| Database functionality | 20% done | Fetching file contents to read and parse | @scyadav,@uparikh
 | Bot Recommendations | In Progress |  | @onjoshi  
 
 
@@ -103,10 +103,10 @@ Other sub-tasks:
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
 | Enhancing UI reporting on slack | Completed |  | @onjoshi
-| Bot Implementation | Completed | Small changes were added | @all
+| Bot Implementation | Completed |  | @all
 | Github functionality | Completed |  | @gmkhande, @skkulkar
 | Database functionality | Completed |  | @scyadav,@uparikh
-| Bot Recommendations | Completed |  | @onjoshi
+| Bot Recommendations | Completed | Recommndations for all 3 use cases | @onjoshi
 
 
 
