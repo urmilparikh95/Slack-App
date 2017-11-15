@@ -1,6 +1,7 @@
 var Promise = require("bluebird");
 
 var gitCredentials = process.env.githubToken;
+var urlRoot = "https://api.github.com";
 
 if (!process.env.githubToken) {
 	console.log('Error: Specify githubToken in environment or .env file');
@@ -9,7 +10,7 @@ if (!process.env.githubToken) {
 }
 
 function getFilesFromRepo(repo_url){
-	return new Promise(function (resolve, reject) 
+	return new Promise(function (resolve, reject)
 	{
 		//Get Recommended Code Libraries
 		//For dummy data, see mock.json also.
@@ -34,5 +35,44 @@ function getFilesFromRepo(repo_url){
 		resolve(list);
 	});
 }
+
+function createWebHook()
+{
+
+	var options = {
+		url: urlRoot + "/repos/" + owner + "/" + repo +"/hooks",
+		method: 'POST',
+		json: true,
+		headers: {
+			"User-Agent": "EnableIssues",
+			"Authorization": token,
+			"name": "web",
+			"active": true,
+			"events": "pull_request",
+			"config":{
+				//testing purposes
+				"url": "https://requestb.in/120y4op1",
+				"content-type": "json"
+
+
+			},
+
+		},
+		body : {
+			name: "WEBHOOK CREATED",
+			description: "A webhook has been created using the Github API",
+			private: false
+		},
+	};
+
+	// Send a http request to url and specify a callback that will be called upon its return.
+	request(options, function (error, response, body)
+	{
+		//print the response
+		console.log(body);
+
+	});
+}
+
 
 exports.getFilesFromRepo = getFilesFromRepo;
