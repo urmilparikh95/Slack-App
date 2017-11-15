@@ -57,7 +57,7 @@ function createWebHook(repo)
     				"pull_request"
   				],
 				"config":{
-					"url": "https://requestb.in/rby5s0rb",
+					"url": "https://droidrecommender.localtunnel.me",
 					"content-type": "json"
 
 			}
