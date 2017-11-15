@@ -2,6 +2,7 @@ var Promise = require("bluebird");
 
 var gitCredentials = process.env.githubToken;
 var urlRoot = "https://api.github.com";
+var repo="REPO_URL"; //enter the github repo (containing android code) url here
 
 if (!process.env.githubToken) {
 	console.log('Error: Specify githubToken in environment or .env file');
@@ -36,7 +37,7 @@ function getFilesFromRepo(repo_url){
 	});
 }
 
-function createWebHook()
+function createWebHook(repo)
 {
 	var options = {
 		url: urlRoot + "/repos/" + owner + "/" + repo +"/hooks",
@@ -53,8 +54,8 @@ function createWebHook()
 				"name": "web",
 				"active": true,
 				"events": [
-    		"pull_request"
-  			],
+    				"pull_request"
+  				],
 				"config":{
 					"url": "https://requestb.in/rby5s0rb",
 					"content-type": "json"
