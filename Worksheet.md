@@ -109,10 +109,46 @@ Other sub-tasks:
 | Bot Recommendations | Completed | Recommendations for all 3 use cases | @onjoshi
 
 
+Other sub-tasks:
+* Debugging was required to integrate all the functionalities.
+
+
+
+# Deploy Milestone  
+
+
+**Week 7 - 11/15/2017 to 11/21/2017**  
+
+
+| Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
+| ------------- | ------------  |  ------------ | ---------------
+| Deployment scripts |  |  |
+| Passing acceptance testing | |  | 
+| Exploratory Testing | | | 
+| Code Inspection |  |  | 
+
 
 Other sub-tasks:
 * Debugging was required to integrate all the functionalities.
 
+
+
+**Week 8 - 11/22/2017 to 11/29/2017**  
+
+
+| Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
+| ------------- | ------------  |  ------------ | ---------------
+| Deployment scripts |  |  |
+| Passing acceptance testing | |  | 
+| Exploratory Testing | | | 
+| Code Inspection |  |  | 
+
+
+Other sub-tasks:
+* Debugging was required to integrate all the functionalities.
+
+
+[Trello link](https://trello.com/b/4s99IqfE/deploy-milestone) for **DEPLOY MILESTONE**  
 
 [Trello link](https://trello.com/b/QfvJ0xst/service-milestone) for **SERVICE MILESTONE**  
 
