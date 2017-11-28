@@ -94,8 +94,11 @@ The Bot will recommend you to use Density Independent Pixels i.e to use "dp" ins
 
 Another Use Case that gives all types of suggetsions is also provided. This can be done by clicking on the "all" button.
 
-### Task Tracking:
-Please find task tracking at ()[]
+### Task Tracking:  
+
+Here is the link to our [Worksheet](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md)
+
+Please find task tracking with Trello [here](https://trello.com/b/4s99IqfE/deploy-milestone)
 
 ### Screencast:
 
