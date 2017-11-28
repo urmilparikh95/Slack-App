@@ -20,6 +20,7 @@ for The Use cases for the Bot are as follows:
 | User ID     | Password      | Slack user name |
 | ------------- | ------------|-----------------| 
 |               |             |                 |
+|               |             |                 |
 
 ##### Use cases:
 
