@@ -25,7 +25,7 @@ for The Use cases for the Bot are as follows:
 
 Log into the channel given above using any of the login credentials.
 
-###### General Instructions:
+##### General Instructions:
 
 1. For the purpose of testing, we used a sample Android application. The github repository containing the code for this sample application can be found [here](https://github.com/joshio1/DroidRecommenderAndroidSample). Thus, you can use this sample github repository as an input to the Droid Bot while testing.
 
@@ -52,21 +52,20 @@ Suggest me some libraries
 ```
 to get the library recommendations.
 
-7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want.
+7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want. 
 
 
-##### Use cases:
+#### Use cases:
 
+The use cases vary depending on the type of recommendations you want. We have used message bu They are as follows:
 
-
-
-
-
-##### Use case I:
+##### Use case I: (UI recommendation)
+In this case, the bot will suggest different recommendations related to UI components such as Buttons, ProgressBar etc.
 
 ##### Use case II:
-
+This case is concerned with providing library recommendations for Java code.
 ##### Use Case III:
+This use case consists of providing general refactoring tips according to the best practices for Android development.
 
 
 
