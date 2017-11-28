@@ -15,8 +15,7 @@ We have deployed our Droid Bot to an Amazon-EC2 instance and for this purpose, w
 Droid is an Android library recommender Bot that analyzes Android code from a given github repositoy and recommends Android libraries that can be used in the code. Thus, the Droid Bot suggests libraries which can help improve the quality of your code.
 
 
-We have deployed the Droid bot to the following Slack channel](). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
-for The Use cases for the Bot are as follows:
+We have deployed the Droid bot to the following Slack channel[](). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
 
 | User ID     | Password      | Slack user name |
 | ------------- | ------------|-----------------| 
@@ -36,7 +35,7 @@ Log into the channel given above using any of the login credentials.
 ```
 /invite @Droid Recommender
 ```
-4. The next step is to configure the Bot. For configuring the Bot, type the following in the chat box:
+4. The next step is to configure the Bot with a Github repository. For configuring the Bot, type the following in the chat box:
 
 ```
 @Droid Recommender please configure me
@@ -59,7 +58,7 @@ to get the library recommendations.
 
 #### Use cases:
 
-The use cases vary depending on the type of recommendations you want. We have used message buttons They are as follows:
+The use cases vary depending on the type of recommendations you want. We have used message buttons to select the type of recommendation. They are as follows:
 
 ##### Use case I: 
 In this case, the bot will suggest different recommendations related to UI components such as Buttons, ProgressBar etc.
