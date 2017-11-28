@@ -129,10 +129,6 @@ Other sub-tasks:
 | ScreenCast | - |  | @onjoshi, @uparikh, @scyadav
 
 
-Other sub-tasks:
-* Debugging was required to integrate all the functionalities.
-
-
 
 **Week 8 - 11/22/2017 to 11/28/2017**  
 
@@ -145,9 +141,8 @@ Other sub-tasks:
 | ScreenCast | Completed | Making and editing screencast | @onjoshi, @uparikh, @scyadav
 
 
-
 Other sub-tasks:
-* Debugging was required to integrate all the functionalities.
+* Integrating all the functionalities and testing them.
 
 
 [Trello link](https://trello.com/b/4s99IqfE/deploy-milestone) for **DEPLOY MILESTONE**  
