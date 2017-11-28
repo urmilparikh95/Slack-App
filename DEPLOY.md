@@ -67,21 +67,32 @@ In this case, the bot will suggest different recommendations related to UI compo
 1. When asked to select the type of recommendation, click on "UI". 
 2. The Bot will then scan the code and it will recommend UI libraries according to the UI elements that have been used in the code that is being analyzed.
 3. For the given sample repository, it should give the reply as described:
-  * 
+A recommendation for using SmoothProgressBar library is provided as a Progress Bar related UI element was used in the sample code. This recommendation comes with a link detailing it's usage and a code snippet. In addition, you will also get a recommendation to use the SilkCal library instead of the default CalenderView. There's also a usage link, a code snippet and a gif image showing how the Calender looks like after you have set this library up in your android applucation. This can be seen in the following screenshot:
+
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%201-1.png)
+
+  One more UI related library -ElasticDownload (another ProgressBar library) is recommended for the sample code.
+  This is how the Bot gives interactive suggestions.
+  
 ##### Use case II: 
 This case is concerned with providing library recommendations for Java code.
 
 1. When asked to select the type of recommendation, click on "Code". 
 2. The Bot will then scan the code and it will recommend Java code libraries accordingly to improve the quality of code.
 3. For the given sample repository, it will give the output as follows:
+A recommendation to use RetroFit library instead of AsyncHttpClient for web services calls is made because HTTP web service calls have been used in the provided sample code. Along with this, what does the library replace and how it does so, code  snippet for using RetroFit and alternatives to using RetroFit (such as Picasso and okHttp) are also provided. The following screenshot shows that:
+  ![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%202-1.png)
 
 ##### Use Case III:
 This use case consists of providing general refactoring tips according to the best practices for Android development.
+1. When asked to select the type of recommendation, click on "General". 
+2. The Bot will then scan the code and it will recommend general good practices to be followed to improve the quality of code.
+3. For the given sample repository, it will give the output as follows:
+The Bot will recommend you to use Density Independent Pixels i.e to use "dp" instead of "px" in the layout.xml file that is present in the given sample code. This suggestion has been made as it makes an application independent of density or resolution and hence is a good practice to follow. The bot will also tell you how to modify your code to use dp instead of px as shown in the following screenshot:
 
-
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%203-1.png)
 
 ### Task Tracking:
-
 Please find task tracking at ()[]
 
 ### Screencast:
