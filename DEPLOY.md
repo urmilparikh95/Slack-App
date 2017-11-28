@@ -54,7 +54,7 @@ to get the library recommendations.
 
 7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want as shown in the screenshot below:
 
-![]()
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Screen%20Shot%201.png)
 
 
 #### Use cases:
