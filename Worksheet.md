@@ -134,8 +134,8 @@ Other sub-tasks:
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Deployment scripts | In progress | Deploying on AWS | @onjoshi
-| Acceptance testing | In progress |  | @gmkhande, @skkulkar
+| Deployment scripts | Completed | Deploying on AWS | @onjoshi
+| Acceptance testing | Completed |  | @gmkhande, @skkulkar
 | Testing Edge cases | Completed | Thorough testing of positive/negative flow | @all
 | Testing use cases | Completed | Thorough testing of use cases | @all
 | ScreenCast | Completed | Making and editing screencast | @onjoshi, @uparikh, @scyadav
