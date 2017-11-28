@@ -31,11 +31,28 @@ Log into the channel given above using any of the login credentials.
 
 2. As mentioned above, we have depolyed our Droid Bot on an Amazon EC2 instance. In order to improve our messaging with the Bot, we have added a slack application instead of a Bot user. We have added the Bot application to our [slack team](https://se-bot-project.slack.com/messages/D7NNV7X44/). Login into this slack team using the credentials mentioned above.
 
-3. We have created a channel- [droid_test]() for communicating with the Droid Recommender Bot. Now, we invited the Droid Recommender Bot to this channel by typing the following:
+3. We have created a channel- [droid_test]() for communicating with the Droid Recommender Bot. Now, we invited the Droid Recommender Bot to this channel by typing the following in the chat box for the given channel:
 
 ```
 /invite @Droid Recommender
 ```
+4. The next step is to configure the Bot. For configuring the Bot, type the following in the chat box:
+
+```
+@Droid Recommender please configure me
+```
+
+5. The Bot will then ask you for the URL of the Github repository to be monitored. Enter the URL of the [sample repository](https://github.com/joshio1/DroidRecommenderAndroidSample) we used for testing in the chat box:
+```
+https://github.com/joshio1/DroidRecommenderAndroidSample
+```
+6. The Bot will then store the repository in it's database. Now you can type
+```
+Suggest me some libraries
+```
+to get the library recommendations.
+
+7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want.
 
 
 ##### Use cases:
