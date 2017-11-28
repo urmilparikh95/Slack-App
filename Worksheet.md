@@ -122,10 +122,11 @@ Other sub-tasks:
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Deployment scripts |  |  |
-| Passing acceptance testing | |  | 
-| Exploratory Testing | | | 
-| Code Inspection |  |  | 
+| Deployment scripts | In progress | Deploying on AWS | @onjoshi
+| Acceptance testing | In progress |  | @gmkhande, @skkulkar
+| Testing Edge cases | - | Thorough testing of positive/negative flow | @all
+| Testing use cases | - | Thorough testing of use cases | @all
+| ScreenCast | - |  | @onjoshi, @uparikh, @scyadav
 
 
 Other sub-tasks:
@@ -133,15 +134,16 @@ Other sub-tasks:
 
 
 
-**Week 8 - 11/22/2017 to 11/29/2017**  
-
+**Week 8 - 11/22/2017 to 11/28/2017**  
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Deployment scripts |  |  |
-| Passing acceptance testing | |  | 
-| Exploratory Testing | | | 
-| Code Inspection |  |  | 
+| Deployment scripts | In progress | Deploying on AWS | @onjoshi
+| Acceptance testing | In progress |  | @gmkhande, @skkulkar
+| Testing Edge cases | Completed | Thorough testing of positive/negative flow | @all
+| Testing use cases | Completed | Thorough testing of use cases | @all
+| ScreenCast | Completed | Making and editing screencast | @onjoshi, @uparikh, @scyadav
+
 
 
 Other sub-tasks:
