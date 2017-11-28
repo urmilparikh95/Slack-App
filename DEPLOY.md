@@ -52,18 +52,29 @@ Suggest me some libraries
 ```
 to get the library recommendations.
 
-7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want. 
+7. The Bot will then check if you have a Github repository configured. If a repository has been configured, the bot will then ask you about the type of recommendations you want as shown in the screenshot below:
+
+![]()
 
 
 #### Use cases:
 
 The use cases vary depending on the type of recommendations you want. We have used message bu They are as follows:
 
-##### Use case I: (UI recommendation)
+##### Use case I: 
 In this case, the bot will suggest different recommendations related to UI components such as Buttons, ProgressBar etc.
 
-##### Use case II:
+1. When asked to select the type of recommendation, click on "UI". 
+2. The Bot will then scan the code and it will recommend UI libraries according to the UI elements that have been used in the code that is being analyzed.
+3. For the given sample repository, it should give the reply as described:
+  * 
+##### Use case II: 
 This case is concerned with providing library recommendations for Java code.
+
+1. When asked to select the type of recommendation, click on "Code". 
+2. The Bot will then scan the code and it will recommend Java code libraries accordingly to improve the quality of code.
+3. For the given sample repository, it will give the output as follows:
+
 ##### Use Case III:
 This use case consists of providing general refactoring tips according to the best practices for Android development.
 
