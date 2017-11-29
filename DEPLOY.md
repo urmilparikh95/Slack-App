@@ -7,8 +7,6 @@ Please find our code for the deployment milestone in the this [deploy](https://g
 
 We have deployed our Droid Bot to an Amazon-EC2 instance and for this purpose, we have used following deployment scripts:
 
-[aws.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/aws.yml)
-
 [deploy_bot.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/deploy_bot.yml)
 
 [setup_bot_server.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/setup_bot_server.yml)
