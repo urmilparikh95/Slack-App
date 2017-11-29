@@ -42,7 +42,7 @@ ansible-playbook deploy_bot.yml
 Droid is an Android library recommender Bot that analyzes Android code from a given github repositoy and recommends Android libraries that can be used in the code. Thus, the Droid Bot suggests libraries which can help improve the quality of your code.
 
 
-We have deployed the Droid bot to the following Slack channel[](https://se-bot-project.slack.com/messages/C85LLTS8Z/). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
+We have deployed the Droid bot to the following Slack channel: [droid_test](https://se-bot-project.slack.com/messages/C85LLTS8Z/). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
 
 | User ID     | Password      | Slack user name |
 | ------------- | ------------|-----------------| 
