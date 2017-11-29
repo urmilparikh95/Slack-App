@@ -9,11 +9,18 @@ We have deployed our Droid Bot to an Amazon-EC2 instance and for this purpose, w
 
 [deploy_bot.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/deploy_bot.yml)
 
-[setup_bot_server.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/setup_bot_server.yml)
+[setup_bot_server.yml](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/setup_bot_server.yml): this script will deploy our Droid Bot to a remote environment
 
 ##### Steps to run the scripts:
 
+1. Invoke the setup_bot_server playbook by running the following command:
 
+```
+ansible-playbook setup_bot_server.yml
+```
+This playbook will install all the dependencies required for the EC2 module and launch the AWS instance which will create a new AWS instance for us.
+
+2. 
 
 
 
