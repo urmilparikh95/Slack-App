@@ -18,11 +18,23 @@ We have deployed our Droid Bot to an Amazon-EC2 instance and for this purpose, w
 ```
 ansible-playbook setup_bot_server.yml
 ```
-This playbook will install all the dependencies required for the EC2 module and launch the AWS instance which will create a new AWS instance for us.
+This playbook will install all the dependencies required for the EC2 module and then launch the AWS instance which will create a new AWS instance for us. You will see that a new instance has been created in the Amazon AWS console. Further, we will install the dependencies and modules such as Nodejs, Forever and so on that are required for our Droid Bot. The screencast will give a detailed description of these steps. Finally we will start the server for our Bot application using Forever. Since, this script creates a new AWS instance, it has to be invoked only once in the entire lifetime of the project.
 
-2. 
+2. Go to your browser and type the <IP address>:<port number>. You will see that our server is up and running. You'll also be able to see a button "Add to Slack" that will let you add the Slack Bot to any Slack team. This indicates that the server has been properly provisioned and deployed.
 
+3. This script will also create an [inventory file](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Deploy/aws_inventory) which will be used to deploy our latest code to the server. 
 
+4. Since we do not want to create a new AWS instance every time, we will use the deploy_bot.yml script with the inventory file to deploy our latest code to the production server. 
+
+5. The deploy_bot.yml script needs to be invoked every time we need to push latest code to the server. Use the following command to invoke the script:
+
+```
+ansible-playbook deploy_bot.yml
+```
+
+6. Since our server is already up and running on the IP address and port number mentioned in the inventory file, the next steps is to add the bot to your slack team by clicking on the "Add to Slack" button.
+
+7. Further, follow the steps mentioned in the screencast to perform the use cases.
 
 ### Acceptance Testing:
 
