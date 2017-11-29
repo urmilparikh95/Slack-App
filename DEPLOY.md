@@ -19,8 +19,8 @@ We have deployed the Droid bot to the following Slack channel[](https://se-bot-p
 
 | User ID     | Password      | Slack user name |
 | ------------- | ------------|-----------------| 
-|               |             |                 |
-|               |             |                 |
+| droidcsc510a@gmail.com | slackbot | TA1 |
+| droidcsc510@gmail.com | slackbot | TA2 |
 
 Log into the channel given above using any of the login credentials.
 
@@ -102,7 +102,7 @@ Please find task tracking with Trello [here](https://trello.com/b/4s99IqfE/deplo
 
 ### Screencast:
 
-Please find the screencast demonstrating the working of our Droid Bot [here]()
+Please find the screencast demonstrating the working of our Droid Bot [here](https://www.youtube.com/watch?v=5jV6bEREovA)
 
 
 
