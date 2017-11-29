@@ -1,4 +1,4 @@
-# CSC 510 Fall 2017 Project- Milestone III (Service)
+# CSC 510 Fall 2017 Project- Milestone IV (DEPLOY)
 
 ## Droid: An Android library recommender Bot.
 
