@@ -1,0 +1,70 @@
+#   - debug:
+#       msg: "Hello"
+# # handlers:
+# # - name: start mongodb service
+# #   service: name=mongodb state=started
+
+- name: Create DroidBot home folder where DroidBot source files will be placed
+  file:
+    path: "{{droid_dest_home_path}}"
+    state: directory
+    mode: u+rwx
+
+# Synchronization using rsync protocol (push)
+- synchronize:
+   src: "{{droid_src_home_path}}"
+   dest: "{{droid_dest_home_path}}"
+  register: synchronize
+  # become: no
+
+# - copy:
+#      src: /home/ubuntu/check_vagrant/Checkbox/
+#      dest: "{{checkbox_home_path}}"
+#when: tomcat_installation.changed
+
+- name: Ensure the system can use the HTTPS transport for APT
+  stat: path=/usr/lib/apt/methods/https
+  register: apt_https_transport
+
+- name: Install HTTPS transport for APT
+  apt: pkg=apt-transport-https state=installed
+  when: not apt_https_transport.stat.exists
+
+- name: Import the NodeSource GPG key into apt
+  apt_key: >
+    id=68576280
+    url="https://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x1655A0AB68576280"
+    validate_certs=False
+
+- name: Add NodeSource deb repository
+  apt_repository: repo='deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main' state=present
+
+- name: Install Node.js
+  apt: pkg=nodejs state=installed update_cache=yes
+
+- name: Install git
+  apt: pkg=git state=installed update_cache=yes
+
+- name: NPM Install
+  npm:
+    path: "{{droid_dest_home_path}}/"
+
+- name: Installing forever.js
+  npm:
+    name: forever
+    global: yes
+    state: present
+
+- name: Stop bot since code changed
+  become: no
+  shell: forever stopall
+  args:
+    chdir: "{{ droid_dest_home_path }}/"
+  when: synchronize.changed
+
+- name: Start bot application
+  become: no
+  shell: forever start bot.js
+  args:
+    chdir: "{{ droid_dest_home_path }}/"
+  when: synchronize.changed

@@ -1,0 +1,9 @@
+## Deploy Latest Code to Droid Bot Production Server
+- name: Deploy bot
+  hosts: all
+  become: True
+  gather_facts: True
+  vars:
+    droid_src_home_path: /home/{{ansible_ssh_user}}/DroidBot/DroidRecommender/
+  roles:
+    - droid_recommender

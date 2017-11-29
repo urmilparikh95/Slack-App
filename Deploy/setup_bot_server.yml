@@ -1,0 +1,25 @@
+## Droid Bot
+- name: Setting up redis master
+  hosts: localhost
+  user: ubuntu
+  vars:
+    group_name: droid_bot
+  tasks:
+
+  - name : Provision aws instance
+    include: aws.yml
+    vars:
+      keypair: checkbox_aws_key
+      instance_type: t2.micro
+      security_group: launch-wizard-2
+      image: ami-43391926
+      region: us-east-2
+
+- name: Configure redis master
+  hosts: droid_bot
+  become: True
+  gather_facts: True
+  vars:
+    droid_src_home_path: /home/{{ansible_ssh_user}}/DroidBot/DroidRecommender/
+  roles:
+    - droid_recommender

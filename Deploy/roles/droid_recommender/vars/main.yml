@@ -1,0 +1,1 @@
+droid_dest_home_path: /home/{{ansible_ssh_user}}/DroidRecommenderBot/

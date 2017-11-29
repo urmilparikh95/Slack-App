@@ -1,0 +1,2 @@
+[droid_bot]
+18.217.59.99 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/keys/checkbox_aws_key.pem

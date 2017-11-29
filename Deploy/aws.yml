@@ -1,0 +1,99 @@
+# GIT_SSH_COMMAND='ssh -i /home/ubuntu/check_vagrant/checkbox_aws_key.pem' git push green master
+# - name: Create a sandbox instance
+#   hosts: localhost
+#   gather_facts: False
+#   user: ubuntu
+  # vars:
+  #   keypair: checkbox_aws_key
+  #   instance_type: t2.micro
+  #   security_group: launch-wizard-2
+  #   image: ami-43391926
+  #   region: us-east-2
+# tasks:
+
+- name : Install pip
+  apt: pkg=python-pip update_cache=yes state=present
+  become: true
+  
+- name: Install boto and boto3
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - boto
+    - boto3
+
+# # private key
+# - name: Creates key {{keypair}}
+#   ec2_key:
+#     name: "{{keypair}}"
+#     region: "{{region}}"
+#   register: ec2_key
+
+# - name: Save private key
+#   copy: content="{{ ec2_key.key.private_key }}" dest="{{keypair}}" mode=0777
+#   when: ec2_key.changed
+
+- name: Launch instance
+  ec2:
+      key_name: "{{ keypair }}"
+      group: "{{ security_group }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ image }}"
+      wait: true
+      region: "{{ region }}"
+      vpc_subnet_id: subnet-d8fcdba3
+      assign_public_ip: yes
+      instance_tags:
+            Name: "{{group_name}}"
+      aws_access_key: AKIAJOLCMCFPPBGXMZKA
+      aws_secret_key: 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
+  register: ec2
+
+- name: Add new instance to host group
+  add_host:
+    hostname: "{{ item.public_ip }}"
+    groupname: "{{group_name}}"
+    ansible_ssh_user: ubuntu
+    ansible_ssh_private_key_file: "/home/{{ansible_ssh_user}}/keys/{{keypair}}.pem"
+  with_items: "{{ ec2.instances }}"
+
+- name: Wait for SSH to come up
+  wait_for:
+    host: "{{ item.public_dns_name }}"
+    port: 22
+    delay: 60
+    timeout: 1000
+    state: started
+  with_items: "{{ ec2.instances }}"
+
+- name: Add group name to inventory file
+  local_action: lineinfile dest=/home/ubuntu/inventory insertafter=EOF line="[{{ group_name }}]" state=present create=yes
+  with_items: ec2.instances
+
+- name: Add vm to group
+  local_action: lineinfile dest=/home/ubuntu/inventory regexp="{{ item.public_ip }}" insertafter="[{{ group_name }}]" line="{{ item.public_ip }} ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/{{ansible_ssh_user}}/keys/{{keypair}}.pem" state=present
+  with_items: ec2.instances
+  
+
+# - name: Configure instance(s)
+#   hosts: launched
+#   become: True
+#   # connection: ssh
+#   # user: ubuntu
+#   # ansible_ssh_private_key_file: "{{ keypair }}"
+#   gather_facts: True
+#   roles:
+#     - checkbox
+#     # - remote_git
+
+# - name: Terminate instances
+#   hosts: localhost
+#   connection: local
+#   vars:
+#     region: us-east-2
+#   tasks:
+#     - name: Terminate instances that were previously launched
+#       ec2:
+#         state: 'absent'
+#         instance_ids: '{{ ec2.instance_ids }}'
+#         region: '{{region}}'
