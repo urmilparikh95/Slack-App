@@ -1,4 +1,8 @@
 
+### Code
+
+Please find our code for the deployment milestone in the this [deploy](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/tree/master/Deploy) folder
+
 ### Deployment
 
 We have deployed our Droid Bot to an Amazon-EC2 instance and for this purpose, we have used following deployment scripts:
