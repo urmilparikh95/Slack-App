@@ -14,4 +14,4 @@
 | Shriyansh Yadav | scyadav |  
 
 
-Here is a link to our [SERVICE.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/SERVICE.md)
+Here is a link to our [DEPLOY.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/DEPLOY.md)
