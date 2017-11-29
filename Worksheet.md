@@ -122,30 +122,27 @@ Other sub-tasks:
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Deployment scripts |  |  |
-| Passing acceptance testing | |  | 
-| Exploratory Testing | | | 
-| Code Inspection |  |  | 
-
-
-Other sub-tasks:
-* Debugging was required to integrate all the functionalities.
+| Deployment scripts | In progress | Deploying on AWS | @onjoshi
+| Acceptance testing | In progress |  | @gmkhande, @skkulkar
+| Testing Edge cases | - | Thorough testing of positive/negative flow | @all
+| Testing use cases | - | Thorough testing of use cases | @all
+| ScreenCast | - |  | @onjoshi, @uparikh, @scyadav
 
 
 
-**Week 8 - 11/22/2017 to 11/29/2017**  
-
+**Week 8 - 11/22/2017 to 11/28/2017**  
 
 | Deliverable   | Item/Status   |  Issues/Tasks | Working Team Member
 | ------------- | ------------  |  ------------ | ---------------
-| Deployment scripts |  |  |
-| Passing acceptance testing | |  | 
-| Exploratory Testing | | | 
-| Code Inspection |  |  | 
+| Deployment scripts | Completed | Deploying on AWS | @onjoshi
+| Acceptance testing | Completed |  | @gmkhande, @skkulkar
+| Testing Edge cases | Completed | Thorough testing of positive/negative flow | @all
+| Testing use cases | Completed | Thorough testing of use cases | @all
+| ScreenCast | Completed | Making and editing screencast | @onjoshi, @uparikh, @scyadav
 
 
 Other sub-tasks:
-* Debugging was required to integrate all the functionalities.
+* Integrating all the functionalities and testing them.
 
 
 [Trello link](https://trello.com/b/4s99IqfE/deploy-milestone) for **DEPLOY MILESTONE**  
