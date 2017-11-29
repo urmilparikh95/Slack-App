@@ -42,7 +42,7 @@ ansible-playbook deploy_bot.yml
 Droid is an Android library recommender Bot that analyzes Android code from a given github repositoy and recommends Android libraries that can be used in the code. Thus, the Droid Bot suggests libraries which can help improve the quality of your code.
 
 
-We have deployed the Droid bot to the following Slack channel: [droid_test](https://se-bot-project.slack.com/messages/C85LLTS8Z/). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
+We have deployed the Droid bot to the following Slack channel: [droid_test](https://se-bot-project.slack.com/messages/C88056XRV/). For the purpose of testing, We have created two dummy users. The credentials for the dummy users are as follows:
 
 | User ID     | Password      | Slack user name |
 | ------------- | ------------|-----------------| 
@@ -57,7 +57,7 @@ Log into the channel given above using any of the login credentials.
 
 2. As mentioned above, we have depolyed our Droid Bot on an Amazon EC2 instance. In order to improve our messaging with the Bot, we have added a slack application instead of a Bot user. We have added the Bot application to our [slack team](https://se-bot-project.slack.com/messages/D7NNV7X44/). Login into this slack team using the credentials mentioned above.
 
-3. We have created a channel- [droid_test](https://se-bot-project.slack.com/messages/C85LLTS8Z/) for communicating with the Droid Recommender Bot. The Droid Recommender Bot has already been invited to this channel.
+3. We have created a channel- [droid_test](https://se-bot-project.slack.com/messages/C88056XRV/) for communicating with the Droid Recommender Bot. The Droid Recommender Bot has already been invited to this channel.
  
 4. The next step is to configure the Bot with a Github repository. For configuring the Bot, type the following in the chat box:
 
