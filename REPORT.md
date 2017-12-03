@@ -5,6 +5,13 @@
 
 Please find the screencast demonstrating the working of our Droid Bot [here](https://www.youtube.com/watch?v=5jV6bEREovA)
 
+## Important Links:
+
+* Milestone 1: [DESIGN](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/DESIGN.md)
+* Milestone 2: [BOT](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M2.md)
+* Milestone 3: [SERVICE](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M3.md)
+* Milestone 4: [DEPLOY](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M4.md)
+* Milestone 5: [REPORT](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/edit/master/REPORT.md)
 
 ## Problem Statement:  
 Android development is an exciting and at times challenging area of application development. In spite of having experience in coding on other platforms, starting development on Android apps involves a steep learning curve. Android development is supported by a set of resources (libraries and features) that are openly available for reuse by other developers in their applications. For a beginner in Android app development, being aware of these existing libraries and other open-source features is unlikely/difficult, restricting the beginner from leveraging the expertise of the developer community and being informed of the generally followed coding conventions. **Our bot aims to solve this problem by recommending existing libraries to users by analyzing their code and thus, provide the users with a choice to optimize their code by integrating these libraries into their code. The Droid Bot aims to making it easy for a beginner Android developer to leverage the resources provided by the Android developer community.** 
