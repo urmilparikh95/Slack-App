@@ -4,11 +4,16 @@ Droid is a Slack-based bot for Android library recommendations. It was developed
 
 ## Presentation:
 
-Please find the screencast demonstrating the working of our Droid Bot [here](https://www.youtube.com/watch?v=5jV6bEREovA)
+Please find the screencast demonstrating the working of our Droid Bot [here](https://www.youtube.com/watch?v=Nx5agZH0Rtw&feature=youtu.be)
 
 
 ## Problem Statement:  
+
 Android development is an exciting and at times challenging area of application development. In spite of having experience in coding on other platforms, starting development on Android apps involves a steep learning curve. Android development is supported by a set of resources (libraries and features) that are openly available for reuse by other developers in their applications. For a beginner in Android app development, being aware of these existing libraries and other open-source features is unlikely/difficult, restricting the beginner from leveraging the expertise of the developer community and being informed of the generally followed coding conventions. **Our bot aims to solve this problem by recommending existing libraries to users by analyzing their code and thus, provide the users with a choice to optimize their code by integrating these libraries into their code. The Droid Bot aims to making it easy for a beginner Android developer to leverage the resources provided by the Android developer community.** 
+
+#### How this helps:
+
+The Droid Bot aims at making it easy for a beginner Android developer to leverage the resources provided by the Android developer community. Reusing code that has been pre-built and pre-tested increases the reliability of a new application and reduces programming and testing effort. Utilizing an existing library in your code can help establish better programming practices, help make use of appropriate design patterns and new programming tools. In addition, developers continue to add new features and provide upgrades throughout an application’s lifetime. A library upgrade can provide new functionality, improved performance, or improved quality without additional programming effort by library user. In case of discovery of new bugs or issues, it is always easier and more reliable to use upgraded versions of the frameworks and libraries (which provide the required functionality) that are released periodically. Thus, utilizing existing libraries and frameworks is always a good practice. Therefore, beginner programmers should have an easy access to these set of libraries rather than having to comb through the plethora of results that he/she would get by doing a simple google search or some similar generic search.
 
 
 ## Primary Features:
@@ -21,7 +26,7 @@ In short, **Droid** provides library recommendations to the Android developers f
 
 
 ## Limitations:
-**Pre-conditions:** Droid is designed specifically, for Android projects only. A user must have understanding of Android design components before hand as well as experience with Github.  
+**Pre-conditions:** Droid is designed specifically, for Android projects only. A user must have understanding of Android design components before hand as well as should have experience with Github.  
 **Droid** has a few other limitations:  
 * Droid  will give recommendations only for those rules which are matched unambiguously.  
 * If there is any library which can be recommended for android as a whole and not for a specific piece of code or functionality, such libraries will not be considered.  
