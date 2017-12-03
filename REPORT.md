@@ -11,16 +11,32 @@ Please find the screencast demonstrating the working of our Droid Bot [here](htt
 
 Android development is an exciting and at times challenging area of application development. In spite of having experience in coding on other platforms, starting development on Android apps involves a steep learning curve. Android development is supported by a set of resources (libraries and features) that are openly available for reuse by other developers in their applications. For a beginner in Android app development, being aware of these existing libraries and other open-source features is unlikely/difficult, restricting the beginner from leveraging the expertise of the developer community and being informed of the generally followed coding conventions. **Our bot aims to solve this problem by recommending existing libraries to users by analyzing their code and thus, provide the users with a choice to optimize their code by integrating these libraries into their code. The Droid Bot aims to making it easy for a beginner Android developer to leverage the resources provided by the Android developer community.** 
 
-#### How this helps:
+#### How the Bot helps:
 
 The Droid Bot aims at making it easy for a beginner Android developer to leverage the resources provided by the Android developer community. Reusing code that has been pre-built and pre-tested increases the reliability of a new application and reduces programming and testing effort. Utilizing an existing library in your code can help establish better programming practices, help make use of appropriate design patterns and new programming tools. In addition, developers continue to add new features and provide upgrades throughout an application’s lifetime. A library upgrade can provide new functionality, improved performance, or improved quality without additional programming effort by library user. In case of discovery of new bugs or issues, it is always easier and more reliable to use upgraded versions of the frameworks and libraries (which provide the required functionality) that are released periodically. Thus, utilizing existing libraries and frameworks is always a good practice. Therefore, beginner programmers should have an easy access to these set of libraries rather than having to comb through the plethora of results that he/she would get by doing a simple google search or some similar generic search.
 
 
 ## Primary Features:
 Droid is a Slack based Bot with the following features:  
-* **Provide recommendations for API libraries:** This case is concerned with providing library recommendations for Java code.  
+
+The Bot first lets you configure a Github repository that contains Android application code for which you need library recommendations and which needs to be monitored. It then gives you four choices to choose the type of recommendation you want:
+The following screenshot depicts this:
+
+ ![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%201.png)
+ 
+ 
+* **Provide recommendations for API libraries:** This case is concerned with providing library recommendations for Java code. Here is a screenshot depicting this use case:
+
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%202-1.png)
+
 * **Provide recommendations for UI libraries:** In this case, the bot will suggest different recommendations related to UI components such as Buttons, ProgressBar etc.   
+The following screenshot shows this use case:
+
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%201-1.png)
+
 * **Code refactoring suggestions:** This use case consists of providing general refactoring tips according to the best practices for Android development.  
+
+![](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Images/Screen%20Shot%203-1.png)
 
 In short, **Droid** provides library recommendations to the Android developers for improving their application code, application user interface, and code quality. Droid suggests different android libraries and utilities to refactor the application code and optimize it. It also provides suggestions on how to beautify the application interface by recommending various layouts and styles for the controls used to develop the application graphics.
 
