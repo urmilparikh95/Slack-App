@@ -1,6 +1,6 @@
-# CSC 510 Fall 2017 Project- Milestone IV (DEPLOY)
+# CSC 510 Fall 2017 Project- Milestone V (REPORT)
 
-## Droid: An Android library recommender Bot.
+## Droid: An Android Library Recommender Bot.
 
 
 #### Team Details:     
@@ -14,4 +14,4 @@
 | Shriyansh Yadav | scyadav |  
 
 
-Here is a link to our [DEPLOY.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/DEPLOY.md)
+Here is a link to our [REPORT.md](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/REPORT.md)
