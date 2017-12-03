@@ -1,19 +1,16 @@
 
+# Droid: Android Library Recommender Bot.
 
-# 510-Project-Fall 2017-Milestone V: Report
-
-## Droid: Android Library Recommender Bot.
-
-### Presentation:
+## Presentation:
 
 Please find the screencast demonstrating the working of our Droid Bot [here](https://www.youtube.com/watch?v=5jV6bEREovA)
 
 
-### Problem Statement:  
+## Problem Statement:  
 Android development is an exciting and at times challenging area of application development. In spite of having experience in coding on other platforms, starting development on Android apps involves a steep learning curve. Android development is supported by a set of resources (libraries and features) that are openly available for reuse by other developers in their applications. For a beginner in Android app development, being aware of these existing libraries and other open-source features is unlikely/difficult, restricting the beginner from leveraging the expertise of the developer community and being informed of the generally followed coding conventions. **Our bot aims to solve this problem by recommending existing libraries to users by analyzing their code and thus, provide the users with a choice to optimize their code by integrating these libraries into their code. The Droid Bot aims to making it easy for a beginner Android developer to leverage the resources provided by the Android developer community.** 
 
 
-### Primary Features:
+## Primary Features:
 Droid is a Slack based Bot with the following features:  
 * **Provide recommendations for API libraries:** This case is concerned with providing library recommendations for Java code.  
 * **Provide recommendations for UI libraries:** In this case, the bot will suggest different recommendations related to UI components such as Buttons, ProgressBar etc.   
@@ -22,7 +19,7 @@ Droid is a Slack based Bot with the following features:
 In short, **Droid** provides library recommendations to the Android developers for improving their application code, application user interface, and code quality. Droid suggests different android libraries and utilities to refactor the application code and optimize it. It also provides suggestions on how to beautify the application interface by recommending various layouts and styles for the controls used to develop the application graphics.
 
 
-### Limitations:
+## Limitations:
 **Pre-conditions:** Droid is designed specifically, for Android projects only. A user must have understanding of Android design components before hand as well as experience with Github.  
 **Droid** has a few other limitations:  
 * Droid  will give recommendations only for those rules which are matched unambiguously.  
@@ -30,7 +27,7 @@ In short, **Droid** provides library recommendations to the Android developers f
 *  The bot will provide static analysis for Android JAVA code, XML files and would not work with any other files.
 
 
-### Development process:
+## Development process:
 
 The project was completed keeping in mind the following milestones:  
 * **Design:**  This involved completing the design sketches and architecture diagrams for the proposed bot.  
