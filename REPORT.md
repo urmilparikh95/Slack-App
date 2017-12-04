@@ -77,7 +77,6 @@ Overall, it was been a great journey with lot of learning during each of the pha
 * Milestone 2: [BOT](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M2.md)
 * Milestone 3: [SERVICE](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M3.md)
 * Milestone 4: [DEPLOY](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/README_M4.md)
-* Milestone 5: [REPORT](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/edit/master/REPORT.md)
 
 ## Future Scope:
 
