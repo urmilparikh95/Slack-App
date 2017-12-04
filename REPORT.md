@@ -49,13 +49,27 @@ In short, **Droid** provides library recommendations to the Android developers f
 *  The bot will provide static analysis for Android JAVA code, XML files and would not work with any other files.
 
 
-## Development process:
+## Development process and Reflection:
 
 The project was completed keeping in mind the following milestones:  
 * **Design:**  This involved completing the design sketches and architecture diagrams for the proposed bot.  
 * **Bot:** We implemented the Mocking Service component to support service integration. It also involved performing bot integration and selenium testing.  
 * **Service:**  The actual bot implementation was performed during this period where we implemented the different functionalities in the bot: Database functionality, Github functionality, Parsing functionality and Recommendation functionality.  
 * **Deployment:** By this time, we had deployed our Droid Bot to an Amazon-EC2 instance.    
+
+### Reflection on each phase and development process:
+
+* **For milestone-1 design**, we described the problem statement for a bot along with the architecture design that we were planning to use for the development process. It also involved understanding the problem statement and coming up with design patterns for the development of the bot etc. We had to be careful in deciding what kind of design pattern could be utilized for this project since our future strategy relied on it. We came up with using event systems and batch sequential design pattern. The functionalities provided by the bot were such that both, explicit and implicit invocation was relevant. For eg. User could either explicitly request for recommendations or could be implicitly notified of recommendations whenever he/she pushes the code into the repository. This was our initial understanding and design conclusions. We modified our design and refined our problem statement after recommendations from the professor and feedback recieved from the TAs as well. One more major component of this phase was deciding the technology stack which was one of the important parts of project.
+
+
+* **For milestone-2 bot**, we came up with the implementation logic for the bot and developed the basic framework or skeleton for the application code. We implemented mock services and data to support service integration. For example, we mocked github user data for the bot to use, that helped us to mock git configuration with the bot. Hooks were also implemented in the code and these hooks listened for specific keywords and on occurence of such words, the execution sequence transfered to the callback function corresponding to those listeners. By this stage, the bot had been implemented in Slack and Our bot had an interactive communication with the user, whereby the user could ask for suggestions for his Android code. To support testing of our bot, we used Selenium testing to verify that the bot was returning the correct response based on a input message. To track the development process, we used trello cards to track and manage tasks assigned to each person.
+
+* **For milestone-3 Service**, we implemented the service part of bot i.e. integrating the GitHub API for configuring a GitHub Repository. We implemented the code for all our modules for the use cases that were proposed. We had to refine our use cases as we advanced with the development and implementation as we gradually understood the feasibility of our design. Accordingly, we enhanced our scope to include functionalities as well as we had to restrict it in some cases where we realized the limitations of our design. A big takeway from this phase was realizing the well-known fact that requirements change over time and hence the fact that Agile Software Developers' teams should always be ready to embrace change.
+
+* **For milestone-4 Deploy**, we deployed the application on an Amazon EC-2 instance to make the bot forever running. We used ansible server script to deploy this application along with all the dependent packages required to make bot run on Amazon EC2.
+Thus, this phase helped us in getting a hang of configuaration management and issues that could be faced during it.
+
+Overall, it was been a great journey with lot of learning during each of the phases of the project. This project helped us experience a software development process in every perspective. Throughout this project, we made use of agile methodology which was quite helpful to understand the requirement at early stages and incorporate the changes as and when a need for them was realized as we moved further down the phases. It also gave us a first hand experience of working in a team environment as well as put into practice everything that we learnt in the course.
 
 ## Important Links:
 
