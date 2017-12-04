@@ -88,4 +88,6 @@ This project could be extended to include the following features/functionalities
 * It could be extended to integrate more mobile platforms such as iOS and to integrate more languages as we move futher.
 
 
-**Task Tracking:**  We also performed continuous task tracking using Trello for [Bot](https://trello.com/b/TOCZ77rb/android-recommender), [Service](https://trello.com/b/QfvJ0xst/service-milestone), [Deploy](https://trello.com/b/4s99IqfE/deploy-milestone). We also maintained a separate [worksheet](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md) to keep a track of tasks we planned for the bot implementation.  
+## Task Tracking:
+
+We also performed continuous task tracking using Trello for [Bot](https://trello.com/b/TOCZ77rb/android-recommender), [Service](https://trello.com/b/QfvJ0xst/service-milestone), [Deploy](https://trello.com/b/4s99IqfE/deploy-milestone). We also maintained a separate [worksheet](https://github.ncsu.edu/uparikh/CSC-510-Bot-Controller/blob/master/Worksheet.md) to keep a track of tasks we planned for the bot implementation.  
